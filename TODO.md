@@ -9,6 +9,9 @@
   - Recipe
   - Entity
 
+# Red science cost option:
+- Whether to make red science cost wood or basic gears
+
 # Support basic belts?
 - Some mods can add basic transport belts (namely Bob's Logistics)... what to do then??
 

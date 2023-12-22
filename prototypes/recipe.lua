@@ -1,11 +1,25 @@
-if settings.startup["wood-logistics-belts"].value == "item" then
+local red_science_costs_basic_gears =
+  settings.startup["wood-logistics-red-science-item"].value == "basic-gear-wheel"
+  and settings.startup["wood-logistics-red-science-cost"].value > 0
+if settings.startup["wood-logistics-belts"].value == "item" or red_science_costs_basic_gears then
   data:extend({
     {
       type = "recipe",
       name = "basic-gear-wheel",
-      ingredients = {{"wood", 1}, {"copper-plate", 1}},
-      result = "basic-gear-wheel"
-    },
+      normal = {
+        ingredients = {{"wood", 1}, {"copper-plate", 1}},
+        result = "basic-gear-wheel"
+      },
+      expensive = {
+        ingredients = {{"wood", 2}, {"copper-plate", 2}},
+        result = "basic-gear-wheel"
+      }
+    }
+  })
+end
+
+if settings.startup["wood-logistics-belts"].value == "item" then
+  data:extend({
     {
       type = "recipe",
       name = "wood-transport-belt",

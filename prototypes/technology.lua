@@ -14,7 +14,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
         ingredients = {{"automation-science-pack", 1}},
         time = 10
       },
-      order = "a-f-a"
+      order = "a-f-A"
     }
   })
 end

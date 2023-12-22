@@ -1,4 +1,7 @@
-if settings.startup["wood-logistics-belts"].value == "item" then
+local red_science_costs_basic_gears =
+  settings.startup["wood-logistics-red-science-item"].value == "basic-gear-wheel"
+  and settings.startup["wood-logistics-red-science-cost"].value > 0
+if settings.startup["wood-logistics-belts"].value == "item" or red_science_costs_basic_gears then
   data:extend({
     {
       type = "item",
@@ -8,7 +11,12 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       subgroup = "intermediate-product",
       order = "c[gear-wheel]-a[basic]",
       stack_size = 100
-    },
+    }
+  })
+end
+
+if settings.startup["wood-logistics-belts"].value == "item" then
+  data:extend({
     {
       type = "item",
       name = "wood-transport-belt",

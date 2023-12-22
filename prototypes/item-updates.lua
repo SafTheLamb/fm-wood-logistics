@@ -1,3 +1,3 @@
-if settings.startup["wood-logistics-belts"].value == "item" then
+if data.raw.item["basic-gear-wheel"] then
   data.raw.item["iron-gear-wheel"].order = "c[gear-wheel]-b[iron]"
 end
