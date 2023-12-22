@@ -1,2 +1,2 @@
-# wood-logistics
-Factorio mod that adds wood-tier basic logistics
+# Wooden Logistics
+Factorio mod that adds wood-tier basic logistics!
