@@ -49,3 +49,18 @@ if settings.startup["wood-logistics-belts"].value == "item" then
     }
   })
 end
+
+if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
+  data:extend({
+    {
+      type = "item",
+      name = "big-wood-electric-pole",
+      icon = "__wood-logistics__/graphics/icons/big-wood-electric-pole.png",
+      icon_size = 64, icon_mipmaps = 4,
+      subgroup = "energy-pipe-distribution",
+      order = "a[energy]-c[big-electric-pole]a",
+      place_result = "big-wood-electric-pole",
+      stack_size = 50
+    }
+  })
+end

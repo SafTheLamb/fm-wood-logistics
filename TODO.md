@@ -3,11 +3,11 @@
 - Tech to unlock wood splitters and wood underground belts (does AAI Industry give transport belts immediately?)
 - Lock base transport belts behind logistics 1 (does AAI Industry change this?)
 
-# Large electric poles:
-- Large wooden electric pole:
-  - Item
-  - Recipe
-  - Entity
+# Assembling machines cost wood:
+- Vanilla: Replace iron plate with wood
+- AAI Industry: Add wood to assembling machine 1
+- Vanilla/AAI Industry: Replace iron gear wheel with basic gear wheel
+- 
 
 # Red science cost option:
 - Whether to make red science cost wood or basic gears

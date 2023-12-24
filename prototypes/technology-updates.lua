@@ -8,3 +8,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
     Technology("basic-logistics"):add_prereq("wood-logistics")
   end
 end
+
+if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
+  Technology("electric-energy-distribution-1"):add_prereq("wood-electric-energy-distribution")
+end

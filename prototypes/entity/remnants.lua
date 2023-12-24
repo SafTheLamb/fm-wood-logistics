@@ -120,3 +120,72 @@ if settings.startup["wood-logistics-belts"].value == "item" then
     }
   })
 end
+
+if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
+  data:extend({
+    {
+      type = "corpse",
+      name = "big-wood-electric-pole-remnants",
+      icon = "__wood-logistics__/graphics/icons/big-wood-electric-pole.png",
+      icon_size = 64, icon_mipmaps = 4,
+      flags = {"placeable-neutral", "not-on-map"},
+      subgroup = "energy-pipe-distribution-remnants",
+      order = "a-c-a",
+      collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+      selection_box = {{-1, -1}, {1, 1}},
+      tile_width = 2,
+      tile_height = 2,
+      selectable_in_game = false,
+      time_before_removed = 60 * 60 * 15, -- 15 minutes
+      final_render_layer = "remnants",
+      animation_overlay_final_render_layer = "object",
+      remove_on_tile_placement = false,
+      animation = make_rotated_animation_variations_from_sheet (4, {
+        layers = {
+          {
+            filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/remnants/big-wood-electric-pole-base-remnants.png",
+            line_length = 1,
+            width = 184,
+            height = 94,
+            frame_count = 1,
+            direction_count = 1,
+            shift = util.by_pixel(44, 0),
+            hr_version = {
+              filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/remnants/hr-big-wood-electric-pole-base-remnants.png",
+              line_length = 1,
+              width = 366,
+              height = 188,
+              frame_count = 1,
+              direction_count = 1,
+              shift = util.by_pixel(43, 0.5),
+              scale = 0.5
+            }
+          }
+        }
+      }),
+      animation_overlay = make_rotated_animation_variations_from_sheet (4, {
+        layers = {
+          {
+            filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/remnants/big-wood-electric-pole-top-remnants.png",
+            line_length = 1,
+            width = 76,
+            height = 126,
+            frame_count = 1,
+            direction_count = 1,
+            shift = util.by_pixel(-1, -48),
+            hr_version = {
+              filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/remnants/hr-big-wood-electric-pole-top-remnants.png",
+              line_length = 1,
+              width = 148,
+              height = 252,
+              frame_count = 1,
+              direction_count = 1,
+              shift = util.by_pixel(-1.5, -48),
+              scale = 0.5
+            }
+          }
+        }
+      })
+    },
+  })
+end

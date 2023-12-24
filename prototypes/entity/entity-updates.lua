@@ -5,3 +5,7 @@ if settings.startup["wood-logistics-small-electric-pole"].value ~= "no" then
       data.raw["electric-pole"]["small-electric-pole"].maximum_wire_distance - 1
   end
 end
+
+if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
+  data.raw["electric-pole"]["big-electric-pole"].fast_replaceable_group = "big-electric-pole"
+end

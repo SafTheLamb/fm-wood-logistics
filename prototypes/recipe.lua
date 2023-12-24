@@ -46,3 +46,19 @@ if settings.startup["wood-logistics-belts"].value == "item" then
     }
   })
 end
+
+if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
+  data:extend({
+    {
+      type = "recipe",
+      name = "big-wood-electric-pole",
+      enabled = false,
+      ingredients = {
+        {"wood", 8},
+        {"steel-plate", 1},
+        {"copper-cable", 5}
+      },
+      result = "big-wood-electric-pole"
+    }
+  })
+end

@@ -24,14 +24,26 @@ if rail_cost > 0 then
   Recipe("rail"):add_ingredient({"wood", rail_cost}, true)
 end
 
+if settings.startup["wood-logistics-assembling-machine"].value ~= "no" then
+  if settings.startup["wood-logistics-assembling-machine"].value == "wood" then
+    
+  end
+end
+
 if settings.startup["wood-logistics-small-electric-pole"].value ~= "no" then
   local small_pole_ingredient = settings.startup["wood-logistics-small-electric-pole"].value == "wood"
-    and {"small-electric-pole", 1} or {"wood", 2}
+    and {"wood", 2} or {"small-electric-pole", 1}
   if data.raw.recipe["small-iron-electric-pole"] then
-    Recipe("small-iron-electric-pole"):add_ingredient({"small-electric-pole", 1}, true)
+    Recipe("small-iron-electric-pole"):add_ingredient(small_pole_ingredient, true)
   else
-    Recipe("medium-electric-pole"):add_ingredient({"small-electric-pole", 1}, true)
+    Recipe("medium-electric-pole"):add_ingredient(small_pole_ingredient, true)
   end
+end
+
+if settings.startup["wood-logistics-big-electric-pole"].value ~= "no" then
+  local big_pole_ingredient = settings.startup["wood-logistics-big-electric-pole"].value == "item"
+    and {"big-wood-electric-pole", 1} or {"wood", 8}
+  Recipe("big-electric-pole"):add_ingredient(big_pole_ingredient, true)
 end
 
 local repair_pack_cost = settings.startup["wood-logistics-repair-pack-cost"].value

@@ -8,7 +8,7 @@ data:extend({
     setting_type = "startup",
     allowed_values = {"item", "recipe", "no"},
     default_value = "item",
-    order = "a[belts]"
+    order = "a[logistics]-a[belts]"
   },
   -- add wood to rails recipe
   {
@@ -17,26 +17,26 @@ data:extend({
     setting_type = "startup",
     default_value = 1,
     minimum_value = 0,
-    order = "b[rails]"
+    order = "a[logistics]-b[rails]"
   },
   -- add small electric poles to metal electric pole recipe
   {
     type = "string-setting",
     name = "wood-logistics-small-electric-pole",
     setting_type = "startup",
-    allowed_values = modutil.aai_industry and {"pole", "no"} or {"pole", "wood", "no"}, -- that would be silly!~
-    default_value = "pole",
+    allowed_values = modutil.aai_industry and {"aai", "no"} or {"vanilla", "wood", "no"}, -- that would be silly!~
+    default_value = modutil.aai_industry and "aai" or "vanilla",
     order = "c[poles]-a[small]"
   },
   -- add big wooden electric poles
-  -- {
-  --   type = "string-setting",
-  --   name = "wood-logistics-big-electric-pole",
-  --   setting_type = "startup",
-  --   allowed_values = {"item", "recipe", "no"},
-  --   default_value = "item",
-  --   order = "c[poles]-b[big]"
-  -- },
+  {
+    type = "string-setting",
+    name = "wood-logistics-big-electric-pole",
+    setting_type = "startup",
+    allowed_values = {"item", "recipe", "no"},
+    default_value = "item",
+    order = "c[poles]-b[big]"
+  },
   -- add wood to repair pack recipe
   {
     type = "int-setting",
