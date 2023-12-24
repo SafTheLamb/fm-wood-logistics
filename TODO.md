@@ -7,7 +7,7 @@
 - Vanilla: Replace iron plate with wood
 - AAI Industry: Add wood to assembling machine 1
 - Vanilla/AAI Industry: Replace iron gear wheel with basic gear wheel
-- 
+- Change adding item to work in any valid scenario
 
 # Red science cost option:
 - Whether to make red science cost wood or basic gears

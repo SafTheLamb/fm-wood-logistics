@@ -25,8 +25,12 @@ if rail_cost > 0 then
 end
 
 if settings.startup["wood-logistics-assembling-machine"].value ~= "no" then
-  if settings.startup["wood-logistics-assembling-machine"].value == "wood" then
-    
+  if settings.startup["wood-logistics-assembling-machine"].value == "vanilla" then
+    Recipe("assembling-machine-1"):replace_ingredient("iron-plate", "wood", true)
+  elseif settings.startup["wood-logistics-assembling-machine"].value == "aai" then
+    Recipe("assembling-machine-1"):add_ingredient({"wood", 5}, true)
+  else
+    Recipe("assembling-machine-1"):replace_ingredient("iron-gear-wheel", "basic-gear-wheel", true)
   end
 end
 
@@ -53,7 +57,7 @@ end
 
 local red_science_cost = settings.startup["wood-logistics-red-science-cost"].value
 if red_science_cost > 0 then
-  if settings.startup["wood-logistics-red-science-item"].value == "basic-gear-wheel" then
+  if settings.startup["wood-logistics-red-science-item"].value == "gear" then
     Recipe("automation-science-pack"):replace_ingredient("copper-plate", {"basic-gear-wheel", red_science_cost}, true)
   else
     Recipe("automation-science-pack"):add_ingredient({"wood", red_science_cost}, true)

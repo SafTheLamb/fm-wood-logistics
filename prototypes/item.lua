@@ -1,7 +1,9 @@
-local red_science_costs_basic_gears =
-  settings.startup["wood-logistics-red-science-item"].value == "basic-gear-wheel"
-  and settings.startup["wood-logistics-red-science-cost"].value > 0
-if settings.startup["wood-logistics-belts"].value == "item" or red_science_costs_basic_gears then
+local add_basic_gear_wheel =
+  settings.startup["wood-logistics-belts"].value == "item"
+  or settings.startup["wood-logistics-assembling-machine"].value == "gear"
+  or (settings.startup["wood-logistics-red-science-item"].value == "gear"
+  and settings.startup["wood-logistics-red-science-cost"].value > 0)
+if add_basic_gear_wheel then
   data:extend({
     {
       type = "item",

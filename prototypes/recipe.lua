@@ -1,7 +1,4 @@
-local red_science_costs_basic_gears =
-  settings.startup["wood-logistics-red-science-item"].value == "basic-gear-wheel"
-  and settings.startup["wood-logistics-red-science-cost"].value > 0
-if settings.startup["wood-logistics-belts"].value == "item" or red_science_costs_basic_gears then
+if data.raw.item["basic-gear-wheel"] then
   data:extend({
     {
       type = "recipe",

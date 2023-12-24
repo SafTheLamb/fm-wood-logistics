@@ -19,6 +19,15 @@ data:extend({
     minimum_value = 0,
     order = "a[logistics]-b[rails]"
   },
+  -- add wood to assembling machine 1
+  {
+    type = "string-setting",
+    name = "wood-logistics-assembling-machine",
+    setting_type = "startup",
+    allowed_values = {modutil.aai_industry and "aai" or "vanilla", "gear", "no"},
+    default_value = modutil.aai_industry and "aai" or "gear",
+    order = "b[production]"
+  },
   -- add small electric poles to metal electric pole recipe
   {
     type = "string-setting",
@@ -51,8 +60,8 @@ data:extend({
     type = "string-setting",
     name = "wood-logistics-red-science-item",
     setting_type = "startup",
-    allowed_values = {"wood", "basic-gear-wheel"},
-    default_value = "basic-gear-wheel",
+    allowed_values = {"wood", "gear"},
+    default_value = "gear",
     order = "e[science]-a[red-item]"
   },
   -- add wood to automation science packs
