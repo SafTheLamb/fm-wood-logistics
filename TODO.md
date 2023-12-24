@@ -1,19 +1,13 @@
-# Todo:
-- Explosions
-- Tech to unlock wood splitters and wood underground belts (does AAI Industry give transport belts immediately?)
-- Lock base transport belts behind logistics 1 (does AAI Industry change this?)
-
-# Assembling machines cost wood:
-- Vanilla: Replace iron plate with wood
-- AAI Industry: Add wood to assembling machine 1
-- Vanilla/AAI Industry: Replace iron gear wheel with basic gear wheel
-- Change adding item to work in any valid scenario
-
-# Red science cost option:
-- Whether to make red science cost wood or basic gears
-
 # Support basic belts?
 - Some mods can add basic transport belts (namely Bob's Logistics)... what to do then??
+
+# Small iron electric pole technology?
+- With AAI Industry, there's not much of a reason to use small (wood) electric poles outside of cost
+
+# Fork Beautiful Bridge Railways
+- They add wood to recipes without checking if already present
+- (A) Move recipe change to data-final-fixes and add dependency
+- (B) Fork beautiful bridge railways (I WOULD like to change a few things myself, like only adding steel bridge rails)
 
 # Planned features:
 - Wood belt sfx?
