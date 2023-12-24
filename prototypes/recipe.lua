@@ -53,9 +53,10 @@ if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
       ingredients = {
         {"wood", 8},
         {"steel-plate", 1},
-        {"copper-cable", 5}
+        {"copper-cable", 4}
       },
-      result = "big-wood-electric-pole"
+      result = "big-wood-electric-pole",
+      result_count = 2
     }
   })
 end
