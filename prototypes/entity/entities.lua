@@ -206,7 +206,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       fast_replaceable_group = "transport-belt",
       next_upgrade = "splitter",
       speed = 0.015625,
-      belt_animation_set = basic_belt_animation_set,
+      belt_animation_set = wood_belt_animation_set,
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
       working_sound = sounds.splitter,
