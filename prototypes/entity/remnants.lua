@@ -1,4 +1,4 @@
-if settings.startup["wood-logistics-belts"].value == "item" then
+if settings.startup["wood-logistics-belts"].value then
   data:extend({
     {
       type = "corpse",
@@ -88,7 +88,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
   })
 end
 
-if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
+if settings.startup["wood-logistics-big-electric-pole"].value then
   data:extend({
     {
       type = "corpse",

@@ -1,6 +1,23 @@
-local modutil = require("modutil")
-
-if settings.startup["wood-logistics-belts"].value == "item" then
+if settings.startup["wood-logistics-belts"].value then
+  if mods["aai-industry"] then
+    data:extend({
+      {
+        type = "technology",
+        name = "basic-wood-logistics",
+        icon = "__wood-logistics__/graphics/technology/wood-logistics.png",
+        icon_size = 256, icon_mipmaps = 4,
+        effects = {
+          {type="unlock-recipe", recipe="wood-transport-belt"},
+          {type="unlock-recipe", recipe="copper-cable"},
+        },
+        research_trigger = {
+          type = "craft-item",
+          item = "copper-plate",
+          count = 10,
+        },
+      }
+    })
+  end
   data:extend({
     {
       type = "technology",
@@ -11,6 +28,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
         {type="unlock-recipe", recipe="wood-underground-belt"},
         {type="unlock-recipe", recipe="wood-splitter"}
       },
+      prerequisites = {"automation-science-pack"},
       unit = {
         count = 10,
         ingredients = {{"automation-science-pack", 1}},
@@ -21,7 +39,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
   })
 end
 
-if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
+if settings.startup["wood-logistics-big-electric-pole"].value then
   data:extend({
     {
       type = "technology",
@@ -41,7 +59,7 @@ if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
     }
   })
 
-  if modutil.aai_industry then
+  if mods["aai-industry"] then
     table.insert(data.raw.technology["wood-electric-energy-distribution"].prerequisites, "electricity")
   end
 end

@@ -1,13 +1,10 @@
-local modutil = require("modutil")
-
 data:extend({
   -- add wood-tier belts, or simply add wood to belt recipes
   {
-    type = "string-setting",
+    type = "bool-setting",
     name = "wood-logistics-belts",
     setting_type = "startup",
-    allowed_values = {"item", "recipe", "no"},
-    default_value = "item",
+    default_value = true,
     order = "a[logistics]-a[belts]"
   },
   -- add wood to rails recipe
@@ -19,31 +16,36 @@ data:extend({
     minimum_value = 0,
     order = "a[logistics]-b[rails]"
   },
+  -- add wood to inserter recipe
+  {
+    type = "bool-setting",
+    name = "wood-logistics-inserter",
+    setting_type = "startup",
+    default_value = true,
+    order = "a[logistics]-c[inserters]"
+  },
   -- add wood to assembling machine 1
   {
-    type = "string-setting",
+    type = "bool-setting",
     name = "wood-logistics-assembling-machine",
     setting_type = "startup",
-    allowed_values = {modutil.aai_industry and "aai" or "vanilla", "gear", "no"},
-    default_value = modutil.aai_industry and "aai" or "gear",
+    default_value = true,
     order = "b[production]"
   },
-  -- add small electric poles to metal electric pole recipe
+  -- nerf small wooden electric poles
   {
-    type = "string-setting",
-    name = "wood-logistics-small-electric-pole",
+    type = "bool-setting",
+    name = "wood-logistics-nerf-small-electric-pole",
     setting_type = "startup",
-    allowed_values = modutil.aai_industry and {"aai", "no"} or {"vanilla", "wood", "no"}, -- that would be silly!~
-    default_value = modutil.aai_industry and "aai" or "vanilla",
+    default_value = true,
     order = "c[poles]-a[small]"
   },
   -- add big wooden electric poles
   {
-    type = "string-setting",
+    type = "bool-setting",
     name = "wood-logistics-big-electric-pole",
     setting_type = "startup",
-    allowed_values = {"item", "recipe", "no"},
-    default_value = "item",
+    default_value = true,
     order = "c[poles]-b[big]"
   },
   -- add wood to repair pack recipe
@@ -51,18 +53,9 @@ data:extend({
     type = "int-setting",
     name = "wood-logistics-repair-pack-cost",
     setting_type = "startup",
-    default_value = 3,
+    default_value = 2,
     minimum_value = 0,
     order = "d[repair-pack]"
-  },
-  -- wood or basic gears for automation science packs
-  {
-    type = "string-setting",
-    name = "wood-logistics-red-science-item",
-    setting_type = "startup",
-    allowed_values = {"wood", "gear"},
-    default_value = "gear",
-    order = "e[science]-a[red-item]"
   },
   -- add wood to automation science packs
   {

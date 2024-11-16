@@ -2,3 +2,9 @@
 Version: 2.0.0
   Major Features:
     - Update mod to Factorio 2.0.7, using Kryzeth's stdlib fork for now (its data-stage functions are currently most up-to-date)
+    - Add basic gear wheel to inserter recipe
+    - Add support for AAI Loaders
+  Changes:
+    - Simplified settings to mostly be boolean checkboxes
+    - Updated technology unlocks to use Factorio 2.0 research triggers
+    - Add belts to red science pack instead of basic gear wheels

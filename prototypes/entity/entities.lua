@@ -3,7 +3,7 @@ require("prototypes.entity.wood-belt-pictures")
 local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 
-if settings.startup["wood-logistics-belts"].value == "item" then
+if settings.startup["wood-logistics-belts"].value then
   data:extend({
     {
       type = "transport-belt",
@@ -241,7 +241,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
   })
 end
 
-if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
+if settings.startup["wood-logistics-big-electric-pole"].value then
   data:extend({
     {
       type = "electric-pole",

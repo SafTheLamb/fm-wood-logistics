@@ -1,8 +1,7 @@
 local add_basic_gear_wheel =
-  settings.startup["wood-logistics-belts"].value == "item"
-  or settings.startup["wood-logistics-assembling-machine"].value == "gear"
-  or (settings.startup["wood-logistics-red-science-item"].value == "gear"
-  and settings.startup["wood-logistics-red-science-cost"].value > 0)
+  settings.startup["wood-logistics-belts"].value
+  or settings.startup["wood-logistics-assembling-machine"].value
+  or settings.startup["wood-logistics-inserter"].value
 if add_basic_gear_wheel then
   data:extend({
     {
@@ -17,7 +16,7 @@ if add_basic_gear_wheel then
   })
 end
 
-if settings.startup["wood-logistics-belts"].value == "item" then
+if settings.startup["wood-logistics-belts"].value then
   data:extend({
     {
       type = "item",
@@ -52,7 +51,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
   })
 end
 
-if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
+if settings.startup["wood-logistics-big-electric-pole"].value then
   data:extend({
     {
       type = "item",

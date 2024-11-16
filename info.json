@@ -9,6 +9,7 @@
   "dependencies": [
     "base >= 2.0.7",
     "kry_stdlib >= 1.5.5",
-    "? aai-industry"
+    "? aai-industry",
+    "? aai-loaders"
   ]
 }
