@@ -8,7 +8,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       name = "wood-transport-belt-explosion",
       icon = "__wood-logistics__/graphics/icons/wood-transport-belt.png",
       icon_size = 64, icon_mipmaps = 4,
-      flags = {"not-on-map", "hidden"},
+      flags = {"not-on-map"},
       subgroup = "belt-explosions",
       order = "b-a-a",
       height = 0,
@@ -16,7 +16,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       smoke = "smoke-fast",
       smoke_count = 2,
       smoke_slow_down_factor = 1,
-      sound = sounds.small_explosion(0.5),
+      sound = sounds.small_explosion,
       created_effect = {
         type = "direct",
         action_delivery = {
@@ -56,7 +56,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       name = "wood-underground-belt-explosion",
       icon = "__wood-logistics__/graphics/icons/wood-underground-belt.png",
       icon_size = 64, icon_mipmaps = 4,
-      flags = {"not-on-map", "hidden"},
+      flags = {"not-on-map"},
       subgroup = "belt-explosions",
       order = "b-d-a",
       height = 0,
@@ -64,7 +64,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       smoke = "smoke-fast",
       smoke_count = 2,
       smoke_slow_down_factor = 1,
-      sound = sounds.small_explosion(0.5),
+      sound = sounds.small_explosion,
       created_effect = {
         type = "direct",
         action_delivery = {
@@ -104,7 +104,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       name = "wood-splitter-explosion",
       icon = "__wood-logistics__/graphics/icons/wood-splitter.png",
       icon_size = 64, icon_mipmaps = 4,
-      flags = {"not-on-map", "hidden"},
+      flags = {"not-on-map"},
       subgroup = "belt-explosions",
       order = "b-g-a",
       height = 0,
@@ -112,7 +112,7 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       smoke = "smoke-fast",
       smoke_count = 2,
       smoke_slow_down_factor = 1,
-      sound = sounds.small_explosion(0.5),
+      sound = sounds.small_explosion,
       created_effect = {
         type = "direct",
         action_delivery = {
@@ -180,7 +180,7 @@ if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
       name = "big-wood-electric-pole-explosion",
       icon = "__wood-logistics__/graphics/icons/big-wood-electric-pole.png",
       icon_size = 64, icon_mipmaps = 4,
-      flags = {"not-on-map", "hidden"},
+      flags = {"not-on-map"},
       subgroup = "energy-pipe-distribution-explosions",
       order = "d-d-a",
       height = 0,
@@ -188,7 +188,7 @@ if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
       smoke = "smoke-fast",
       smoke_count = 2,
       smoke_slow_down_factor = 1,
-      sound = sounds.medium_explosion(0.4),
+      sound = sounds.medium_explosion,
       created_effect = {
         type = "direct",
         action_delivery = {

@@ -15,27 +15,16 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       time_before_removed = 60 * 60 * 15, -- 15 minutes
       final_render_layer = "remnants",
       animation =  make_rotated_animation_variations_from_sheet(2, {
-        filename = "__wood-logistics__/graphics/entity/wood-transport-belt/remnants/wood-transport-belt-remnants.png",
+        filename = "__wood-logistics__/graphics/entity/wood-transport-belt/remnants/hr-wood-transport-belt-remnants.png",
         line_length = 1,
-        width = 54,
-        height = 52,
+        width = 106,
+        height = 102,
         frame_count = 1,
         variation_count = 1,
         axially_symmetrical = false,
         direction_count = 4,
-        shift = util.by_pixel(1, 0),
-        hr_version = {
-          filename = "__wood-logistics__/graphics/entity/wood-transport-belt/remnants/hr-wood-transport-belt-remnants.png",
-          line_length = 1,
-          width = 106,
-          height = 102,
-          frame_count = 1,
-          variation_count = 1,
-          axially_symmetrical = false,
-          direction_count = 4,
-          shift = util.by_pixel(1, -0.5),
-          scale = 0.5
-        }
+        shift = util.by_pixel(1, -0.5),
+        scale = 0.5
       })
     },
 
@@ -55,27 +44,16 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       final_render_layer = "remnants",
       remove_on_tile_placement = false,
       animation = {
-        filename = "__wood-logistics__/graphics/entity/wood-underground-belt/remnants/wood-underground-belt-remnants.png",
+        filename = "__wood-logistics__/graphics/entity/wood-underground-belt/remnants/hr-wood-underground-belt-remnants.png",
         line_length = 1,
-        width = 78,
-        height =72,
+        width = 156,
+        height = 144,
         frame_count = 1,
         variation_count = 1,
         axially_symmetrical = false,
         direction_count = 8,
-        shift = util.by_pixel(10, 3),
-        hr_version = {
-          filename = "__wood-logistics__/graphics/entity/wood-underground-belt/remnants/hr-wood-underground-belt-remnants.png",
-          line_length = 1,
-          width = 156,
-          height = 144,
-          frame_count = 1,
-          variation_count = 1,
-          axially_symmetrical = false,
-          direction_count = 8,
-          shift = util.by_pixel(10.5, 3),
-          scale = 0.5
-        }
+        shift = util.by_pixel(10.5, 3),
+        scale = 0.5
       }
     },
 
@@ -95,27 +73,16 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       final_render_layer = "remnants",
       remove_on_tile_placement = false,
       animation = {
-        filename = "__wood-logistics__/graphics/entity/wood-splitter/remnants/wood-splitter-remnants.png",
+        filename = "__wood-logistics__/graphics/entity/wood-splitter/remnants/hr-wood-splitter-remnants.png",
         line_length = 1,
-        width = 96,
-        height = 96,
+        width = 190,
+        height = 190,
         frame_count = 1,
         variation_count = 1,
         axially_symmetrical = false,
         direction_count = 4,
-        shift = util.by_pixel(4, 1.5),
-        hr_version = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/remnants/hr-wood-splitter-remnants.png",
-          line_length = 1,
-          width = 190,
-          height = 190,
-          frame_count = 1,
-          variation_count = 1,
-          axially_symmetrical = false,
-          direction_count = 4,
-          shift = util.by_pixel(3.5, 1.5),
-          scale = 0.5
-        }
+        shift = util.by_pixel(3.5, 1.5),
+        scale = 0.5
       }
     }
   })
@@ -143,46 +110,28 @@ if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
       animation = make_rotated_animation_variations_from_sheet (4, {
         layers = {
           {
-            filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/remnants/big-wood-electric-pole-base-remnants.png",
+            filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/remnants/hr-big-wood-electric-pole-base-remnants.png",
             line_length = 1,
-            width = 184,
-            height = 94,
+            width = 366,
+            height = 188,
             frame_count = 1,
             direction_count = 1,
-            shift = util.by_pixel(44, 0),
-            hr_version = {
-              filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/remnants/hr-big-wood-electric-pole-base-remnants.png",
-              line_length = 1,
-              width = 366,
-              height = 188,
-              frame_count = 1,
-              direction_count = 1,
-              shift = util.by_pixel(43, 0.5),
-              scale = 0.5
-            }
+            shift = util.by_pixel(43, 0.5),
+            scale = 0.5
           }
         }
       }),
       animation_overlay = make_rotated_animation_variations_from_sheet (4, {
         layers = {
           {
-            filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/remnants/big-wood-electric-pole-top-remnants.png",
+            filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/remnants/hr-big-wood-electric-pole-top-remnants.png",
             line_length = 1,
-            width = 76,
-            height = 126,
+            width = 148,
+            height = 252,
             frame_count = 1,
             direction_count = 1,
-            shift = util.by_pixel(-1, -48),
-            hr_version = {
-              filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/remnants/hr-big-wood-electric-pole-top-remnants.png",
-              line_length = 1,
-              width = 148,
-              height = 252,
-              frame_count = 1,
-              direction_count = 1,
-              shift = util.by_pixel(-1.5, -48),
-              scale = 0.5
-            }
+            shift = util.by_pixel(-1.5, -48),
+            scale = 0.5
           }
         }
       })

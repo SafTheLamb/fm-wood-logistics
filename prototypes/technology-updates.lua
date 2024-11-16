@@ -1,4 +1,4 @@
-local Technology = require("__stdlib__.stdlib.data.technology")
+local Technology = require("__kry_stdlib__.stdlib.data.technology")
 local modutil = require("modutil")
 
 if settings.startup["wood-logistics-belts"].value == "item" then

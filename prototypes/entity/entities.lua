@@ -90,98 +90,59 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       structure = {
         direction_in = {
           sheet = {
-            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
             priority = "extra-high",
-            width = 96,
-            height = 96,
-            y = 96,
-            hr_version = {
-              filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
-              priority = "extra-high",
-              width = 192,
-              height =192,
-              y = 192,
-              scale = 0.5
-            }
+            width = 192,
+            height = 192,
+            y = 192,
+            scale = 0.5
           }
         },
         direction_out = {
           sheet = {
-            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
             priority = "extra-high",
-            width = 96,
-            height = 96,
-            hr_version = {
-              filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
-              priority = "extra-high",
-              width = 192,
-              height = 192,
-              scale = 0.5
-            }
+            width = 192,
+            height = 192,
+            scale = 0.5
           }
         },
         direction_in_side_loading = {
           sheet = {
-            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
             priority = "extra-high",
-            width = 96,
-            height = 96,
-            y = 96*3,
-            hr_version = {
-              filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
-              priority = "extra-high",
-              width = 192,
-              height = 192,
-              y = 192*3,
-              scale = 0.5
-            }
+            width = 192,
+            height = 192,
+            y = 192*3,
+            scale = 0.5
           }
         },
         direction_out_side_loading = {
           sheet = {
-            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
             priority = "extra-high",
-            width = 96,
-            height = 96,
-            y = 96*2,
-            hr_version = {
-              filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
-              priority = "extra-high",
-              width = 192,
-              height = 192,
-              y= 192*2,
-              scale = 0.5
-            },
+            width = 192,
+            height = 192,
+            y= 192*2,
+            scale = 0.5
           }
         },
         back_patch = {
           sheet = {
             filename = "__base__/graphics/entity/underground-belt/underground-belt-structure-back-patch.png",
             priority = "extra-high",
-            width = 96,
-            height = 96,
-            hr_version = {
-              filename = "__base__/graphics/entity/underground-belt/hr-underground-belt-structure-back-patch.png",
-              priority = "extra-high",
-              width = 192,
-              height = 192,
-              scale = 0.5
-            }
+            width = 192,
+            height = 192,
+            scale = 0.5
           }
         },
         front_patch = {
           sheet = {
             filename = "__base__/graphics/entity/underground-belt/underground-belt-structure-front-patch.png",
             priority = "extra-high",
-            width = 96,
-            height = 96,
-            hr_version = {
-              filename = "__base__/graphics/entity/underground-belt/hr-underground-belt-structure-front-patch.png",
-              priority = "extra-high",
-              width = 192,
-              height = 192,
-              scale = 0.5
-            }
+            width = 192,
+            height = 192,
+            scale = 0.5
           }
         }
       }
@@ -212,122 +173,68 @@ if settings.startup["wood-logistics-belts"].value == "item" then
       working_sound = sounds.splitter,
       structure = {
         north = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-north.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-north.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
-          width = 82,
-          height = 36,
-          shift = util.by_pixel(6, 0),
-          hr_version = {
-            filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-north.png",
-            frame_count = 32,
-            line_length = 8,
-            priority = "extra-high",
-            width = 160,
-            height = 70,
-            shift = util.by_pixel(7, 0),
-            scale = 0.5
-          }
+          width = 160,
+          height = 70,
+          shift = util.by_pixel(7, 0),
+          scale = 0.5
         },
         east = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-east.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-east.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
-          width = 46,
-          height = 44,
-          shift = util.by_pixel(4, 12),
-          hr_version = {
-            filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-east.png",
-            frame_count = 32,
-            line_length = 8,
-            priority = "extra-high",
-            width = 90,
-            height = 84,
-            shift = util.by_pixel(4, 13),
-            scale = 0.5
-          }
+          width = 90,
+          height = 84,
+          shift = util.by_pixel(4, 13),
+          scale = 0.5
         },
         south = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-south.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-south.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
-          width = 82,
-          height = 32,
+          width = 164,
+          height = 64,
           shift = util.by_pixel(4, 0),
-          hr_version = {
-            filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-south.png",
-            frame_count = 32,
-            line_length = 8,
-            priority = "extra-high",
-            width = 164,
-            height = 64,
-            shift = util.by_pixel(4, 0),
-            scale = 0.5
-          }
+          scale = 0.5
         },
         west = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-west.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-west.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
-          width = 46,
-          height = 44,
+          width = 90,
+          height = 86,
           shift = util.by_pixel(6, 12),
-          hr_version = {
-            filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-west.png",
-            frame_count = 32,
-            line_length = 8,
-            priority = "extra-high",
-            width = 90,
-            height = 86,
-            shift = util.by_pixel(6, 12),
-            scale = 0.5
-          }
+          scale = 0.5
         }
       },
       structure_patch = {
         north = util.empty_sprite(),
         east = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-east-top_patch.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-east-top_patch.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
-          width = 46,
-          height = 52,
+          width = 90,
+          height = 104,
           shift = util.by_pixel(4, -20),
-          hr_version = {
-            filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-east-top_patch.png",
-            frame_count = 32,
-            line_length = 8,
-            priority = "extra-high",
-            width = 90,
-            height = 104,
-            shift = util.by_pixel(4, -20),
-            scale = 0.5
-          }
+          scale = 0.5
         },
         south = util.empty_sprite(),
         west = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-west-top_patch.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-west-top_patch.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
-          width = 46,
-          height = 48,
+          width = 90,
+          height = 96,
           shift = util.by_pixel(6, -18),
-          hr_version = {
-            filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-west-top_patch.png",
-            frame_count = 32,
-            line_length = 8,
-            priority = "extra-high",
-            width = 90,
-            height = 96,
-            shift = util.by_pixel(6, -18),
-            scale = 0.5
-          }
+          scale = 0.5
         }
       }
     },
@@ -341,7 +248,7 @@ if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
       name = "big-wood-electric-pole",
       icon = "__wood-logistics__/graphics/icons/big-wood-electric-pole.png",
       icon_size = 64, icon_mipmaps = 4,
-      flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
+      flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 0.1, result = "big-wood-electric-pole"},
       max_health = 150,
       corpse = "big-wood-electric-pole-remnants",
@@ -353,47 +260,30 @@ if settings.startup["wood-logistics-big-electric-pole"].value == "item" then
       drawing_box = {{-1, -3}, {1, 0.5}},
       maximum_wire_distance = 22,
       supply_area_distance = 1,
-      vehicle_impact_sound = sounds.car_wood_impact(0.5),
+      impact_category = "wood",
       open_sound = sounds.electric_network_open,
       close_sound = sounds.electric_network_close,
       fast_replaceable_group = "big-electric-pole",
       pictures = {
         layers = {
           {
-            filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/big-wood-electric-pole.png",
+            filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/hr-big-wood-electric-pole.png",
             priority = "extra-high",
-            width = 76,
-            height = 156,
+            width = 148,
+            height = 312,
             direction_count = 4,
-            shift = util.by_pixel(1, -51),
-            hr_version = {
-              filename = "__wood-logistics__/graphics/entity/big-wood-electric-pole/hr-big-wood-electric-pole.png",
-              priority = "extra-high",
-              width = 148,
-              height = 312,
-              direction_count = 4,
-              shift = util.by_pixel(0, -51),
-              scale = 0.5
-            }
+            shift = util.by_pixel(0, -51),
+            scale = 0.5
           },
           {
             filename = "__base__/graphics/entity/big-electric-pole/big-electric-pole-shadow.png",
             priority = "extra-high",
-            width = 188,
-            height = 48,
+            width = 374,
+            height = 94,
             direction_count = 4,
             shift = util.by_pixel(60, 0),
             draw_as_shadow = true,
-            hr_version = {
-              filename = "__base__/graphics/entity/big-electric-pole/hr-big-electric-pole-shadow.png",
-              priority = "extra-high",
-              width = 374,
-              height = 94,
-              direction_count = 4,
-              shift = util.by_pixel(60, 0),
-              draw_as_shadow = true,
-              scale = 0.5
-            }
+            scale = 0.5
           }
         }
       },
