@@ -1,7 +1,7 @@
 local Recipe = require("__kry_stdlib__.stdlib.data.recipe")
 
 if settings.startup["wood-logistics-belts"].value then
-  Recipe("automation-science-pack"):replace_ingredient("copper-plate", {type="item", name="wood-transport-belt", amount=1})
+  Recipe("automation-science-pack"):replace_ingredient("copper-plate", {type="item", name="wood-transport-belt", amount=2})
   if mods["aai-industry"] then
     Recipe("transport-belt"):add_ingredient({type="item", name="wood-transport-belt", amount=2})
   else

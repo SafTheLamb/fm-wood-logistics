@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+  Changes:
+    - Increase cost for Automation science packs to 2 wood transport belts
+    - Remove unused red science cost startup setting
+
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
   Major Features:
     - Add compatibility with Big Wooden Pole

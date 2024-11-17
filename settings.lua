@@ -56,14 +56,5 @@ data:extend({
     default_value = 2,
     minimum_value = 0,
     order = "d[repair-pack]"
-  },
-  -- add wood to automation science packs
-  {
-    type = "int-setting",
-    name = "wood-logistics-red-science-cost",
-    setting_type = "startup",
-    default_value = 1,
-    minimum_value = 0,
-    order = "e[science]-b[red-cost]"
   }
 })
