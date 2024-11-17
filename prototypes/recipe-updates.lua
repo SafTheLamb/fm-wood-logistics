@@ -36,15 +36,23 @@ if settings.startup["wood-logistics-inserter"].value then
 end
 
 if settings.startup["wood-logistics-assembling-machine"].value then
-  if mods["aai-industry"] then
-    Recipe("assembling-machine-1"):add_ingredient({type="item", name="wood", amount=5})
-  else
-    Recipe("assembling-machine-1"):replace_ingredient("iron-gear-wheel", "basic-gear-wheel")
-  end
+  Recipe("assembling-machine-1"):replace_ingredient("iron-gear-wheel", "basic-gear-wheel")
+  -- if mods["aai-industry"] then
+  --   Recipe("assembling-machine-1"):add_ingredient({type="item", name="wood", amount=5})
+  -- else
+  -- end
 end
 
 if settings.startup["wood-logistics-big-electric-pole"].value then
   Recipe("big-electric-pole"):add_ingredient({type="item", name="big-wood-electric-pole", amount=1})
+  if mods["big-wooden-pole"] then
+    Recipe("big-wooden-pole"):replace_ingredient("wood", "small-electric-pole")
+    Recipe("big-wood-electric-pole"):replace_ingredient("small-electric-pole", {type="item", name="big-wooden-pole", amount=2})
+  end
+end
+
+if mods["big-wooden-pole"] then
+  Recipe("big-wooden-pole"):add_unlock("electricity")
 end
 
 local repair_pack_cost = settings.startup["wood-logistics-repair-pack-cost"].value
@@ -52,6 +60,11 @@ if repair_pack_cost > 0 then
   Recipe("repair-pack"):add_ingredient({type="item", name="wood", amount=repair_pack_cost})
 end
 
-if mods["aai-loaders"] and data.raw.recipe["wood-aai-loader"] then
+if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
   Recipe("aai-loader"):replace_ingredient("transport-belt", "aai-wood-loader")
+  data.raw.recipe["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
+end
+
+if mods["vanilla-loaders-hd"] and settings.startup["wood-logistics-belts"].value then
+  Recipe("loader"):replace_ingredient("iron-gear-wheel", {type="item", name="wood-loader", amount=1})
 end

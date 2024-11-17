@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+  Major Features:
+    - Add compatibility with Big Wooden Pole
+    - Add compatibility with Vanilla Loaders
+  Minor Features:
+    - Add surface conditions for wooden entities if Space Age is enabled (pressure >= 1000, pressure <= 2000)
+  Changes:
+    - Remove Copper cables from Big wooden electric pole recipe
+    - Simplify recipe for Basic gear wheels to 2 wood
+
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
   Major Features:
     - Update mod to Factorio 2.0.7, using Kryzeth's stdlib fork for now (its data-stage functions are currently most up-to-date)

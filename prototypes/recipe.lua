@@ -3,10 +3,7 @@ if data.raw.item["basic-gear-wheel"] then
     {
       type = "recipe",
       name = "basic-gear-wheel",
-      ingredients = {
-        {type="item", name="wood", amount=1},
-        {type="item", name="copper-plate", amount=1}
-      },
+      ingredients = {{type="item", name="wood", amount=2}},
       results = {{type="item", name="basic-gear-wheel", amount=1}}
     }
   })
@@ -30,7 +27,7 @@ if settings.startup["wood-logistics-belts"].value then
       enabled = false,
       energy_required = 1,
       ingredients = {
-        {type="item", name="basic-gear-wheel", amount=6},
+        {type="item", name="basic-gear-wheel", amount=2},
         {type="item", name="wood-transport-belt", amount=4}
       },
       results = {{type="item", name="wood-underground-belt", amount=2}}
@@ -58,8 +55,7 @@ if settings.startup["wood-logistics-big-electric-pole"].value then
       enabled = false,
       ingredients = {
         {type="item", name="small-electric-pole", amount=4},
-        {type="item", name="steel-plate", amount=1},
-        {type="item", name="copper-cable", amount=4}
+        {type="item", name="steel-plate", amount=1}
       },
       results = {{type="item", name="big-wood-electric-pole", amount=2}}
     }

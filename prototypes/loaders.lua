@@ -1,3 +1,4 @@
+
 if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
   AAILoaders.make_tier{
     name = "wood",
@@ -33,4 +34,22 @@ if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
     next_upgrade = "aai-loader",
     localise = false
   }
+end
+
+if mods["vanilla-loaders-hd"] then
+  local vanilla_loaders_api = require("__vanilla-loaders-hd__.prototypes.api")
+  if settings.startup["wood-logistics-belts"].value then
+    vanilla_loaders_api.create_loader("wood-loader", "wood-transport-belt", {
+      technology = "wood-logistics",
+      mask_tint = util.color("a06e5ad1"),
+      base_tint = util.color("cc6a47"),
+      ingredients = {
+        {type="item", name="wood", amount=8},
+        {type="item", name="copper-cable", amount=5},
+        {type="item", name="basic-gear-wheel", amount=4},
+        {type="item", name="wood-transport-belt", amount=5}
+      },
+      next_tier = "loader"
+    })
+  end
 end
