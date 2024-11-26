@@ -9,10 +9,11 @@
   "dependencies": [
     "base >= 2.0.7",
     "kry_stdlib >= 1.5.5",
-    "? space-age",
+    "space-age >= 2.0.7",
     "? aai-industry",
     "? aai-loaders",
     "? vanilla-loaders-hd",
+    "? expensive-mode",
     "? big-wooden-pole"
   ]
 }

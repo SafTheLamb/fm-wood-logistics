@@ -1,4 +1,3 @@
-
 if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
   AAILoaders.make_tier{
     name = "wood",

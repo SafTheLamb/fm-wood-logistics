@@ -1,3 +1,4 @@
+-------------------------------------------------------------------------- Transport belts
 if settings.startup["wood-logistics-belts"].value then
   if mods["aai-industry"] then
     data:extend({
@@ -39,6 +40,7 @@ if settings.startup["wood-logistics-belts"].value then
   })
 end
 
+-------------------------------------------------------------------------- Electric poles
 if settings.startup["wood-logistics-big-electric-pole"].value then
   data:extend({
     {

@@ -6,3 +6,5 @@ require("prototypes.recipe")
 require("prototypes.technology")
 
 require("prototypes.loaders")
+
+require("prototypes.base-data-updates")

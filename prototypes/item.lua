@@ -1,3 +1,4 @@
+-------------------------------------------------------------------------- Intermediates
 local add_basic_gear_wheel =
   settings.startup["wood-logistics-belts"].value
   or settings.startup["wood-logistics-assembling-machine"].value
@@ -16,6 +17,7 @@ if add_basic_gear_wheel then
   })
 end
 
+-------------------------------------------------------------------------- Transport belts
 if settings.startup["wood-logistics-belts"].value then
   data:extend({
     {

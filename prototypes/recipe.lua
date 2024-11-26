@@ -1,14 +1,18 @@
+-------------------------------------------------------------------------- Intermediates
 if data.raw.item["basic-gear-wheel"] then
   data:extend({
     {
       type = "recipe",
       name = "basic-gear-wheel",
-      ingredients = {{type="item", name="wood", amount=2}},
+      ingredients = {
+        mods["expensive-mode"] and {type="item", name="wood", amount=4} or {type="item", name="wood", amount=2}
+      },
       results = {{type="item", name="basic-gear-wheel", amount=1}}
     }
   })
 end
 
+-------------------------------------------------------------------------- Transport belts
 if settings.startup["wood-logistics-belts"].value then
   data:extend({
     {
@@ -47,6 +51,7 @@ if settings.startup["wood-logistics-belts"].value then
   })
 end
 
+-------------------------------------------------------------------------- Electric poles
 if settings.startup["wood-logistics-big-electric-pole"].value then
   data:extend({
     {
@@ -55,7 +60,8 @@ if settings.startup["wood-logistics-big-electric-pole"].value then
       enabled = false,
       ingredients = {
         {type="item", name="small-electric-pole", amount=4},
-        {type="item", name="steel-plate", amount=1}
+        {type="item", name="steel-plate", amount=1},
+        {type="item", name="stone-brick", amount=4}
       },
       results = {{type="item", name="big-wood-electric-pole", amount=2}}
     }
