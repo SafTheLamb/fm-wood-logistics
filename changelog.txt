@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+  Changes:
+    - Replace Basic gear wheels with Lumber and give it its own dedicated setting
+    - Swap out kry_stdlib for fdsl
+
+---------------------------------------------------------------------------------------------------
 Version: 2.0.2
   Changes:
     - Increase cost for Automation science packs to 2 wood transport belts

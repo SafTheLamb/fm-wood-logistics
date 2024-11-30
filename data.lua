@@ -7,4 +7,4 @@ require("prototypes.technology")
 
 require("prototypes.loaders")
 
-require("prototypes.base-data-updates")
+require("base-data-updates")

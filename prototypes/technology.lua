@@ -13,8 +13,8 @@ if settings.startup["wood-logistics-belts"].value then
         },
         research_trigger = {
           type = "craft-item",
-          item = "copper-plate",
-          count = 10,
+          item = "copper-cable",
+          count = 50,
         },
       }
     })
@@ -60,8 +60,4 @@ if settings.startup["wood-logistics-big-electric-pole"].value then
       order = "a"
     }
   })
-
-  if mods["aai-industry"] then
-    table.insert(data.raw.technology["wood-electric-energy-distribution"].prerequisites, "electricity")
-  end
 end

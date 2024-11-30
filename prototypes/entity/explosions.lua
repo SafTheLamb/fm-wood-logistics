@@ -2,6 +2,7 @@ local explosion_animations = require("__base__.prototypes.entity.explosion-anima
 local sounds = require("__base__.prototypes.entity.sounds")
 
 -------------------------------------------------------------------------- Transport belts
+
 if settings.startup["wood-logistics-belts"].value then
   data:extend({
     {
@@ -175,6 +176,7 @@ if settings.startup["wood-logistics-belts"].value then
 end
 
 -------------------------------------------------------------------------- Electric poles
+
 if settings.startup["wood-logistics-big-electric-pole"].value then
   data:extend({
     {

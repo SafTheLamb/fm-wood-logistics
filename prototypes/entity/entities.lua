@@ -2,6 +2,7 @@ local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 
 -------------------------------------------------------------------------- Transport belts
+
 if settings.startup["wood-logistics-belts"].value then
   wood_belt_animation_set =
   {
