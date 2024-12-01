@@ -42,6 +42,10 @@ if settings.startup["wood-logistics-belts"].value then
   frep.replace_ingredient("underground-belt", "transport-belt", {type="item", name="wood-underground-belt", amount=2})
   frep.replace_ingredient("splitter", "transport-belt", {type="item", name="wood-splitter", amount=1})
 
+  if not mods["aai-industry"] then
+    frep.replace_ingredient("lab", "transport-belt", "inserter")
+  end
+
   frep.replace_ingredient("automation-science-pack", "copper-plate", {type="item", name="wood-transport-belt", amount=2})
 
   if mods["aai-loaders"] then

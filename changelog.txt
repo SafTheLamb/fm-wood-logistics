@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.1
+  Changes:
+    - Change lab recipe to fix impossible progression
+
+---------------------------------------------------------------------------------------------------
 Version: 2.1.0
   Changes:
     - Replace Basic gear wheels with Lumber and give it its own dedicated setting
