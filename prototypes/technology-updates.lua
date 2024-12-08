@@ -31,11 +31,6 @@ if mods["big-wooden-pole"] then
 end
 
 if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
-  table.insert(data.raw.technology["aai-wood-loader"].icons, {
-    icon = "__wood-logistics__/graphics/technology/aai-wood-loader-overlay.png",
-    icon_size = 256
-  })
-
   ftech.add_prereq("aai-loader", "aai-wood-loader")
   ftech.scale_cost("aai-loader", {count=5})
 end

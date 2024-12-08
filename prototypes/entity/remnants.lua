@@ -17,7 +17,7 @@ if settings.startup["wood-logistics-belts"].value then
       time_before_removed = 60 * 60 * 15, -- 15 minutes
       final_render_layer = "remnants",
       animation =  make_rotated_animation_variations_from_sheet(2, {
-        filename = "__wood-logistics__/graphics/entity/wood-transport-belt/remnants/hr-wood-transport-belt-remnants.png",
+        filename = "__wood-logistics__/graphics/entity/wood-transport-belt/remnants/wood-transport-belt-remnants.png",
         line_length = 1,
         width = 106,
         height = 102,
@@ -46,7 +46,7 @@ if settings.startup["wood-logistics-belts"].value then
       final_render_layer = "remnants",
       remove_on_tile_placement = false,
       animation = {
-        filename = "__wood-logistics__/graphics/entity/wood-underground-belt/remnants/hr-wood-underground-belt-remnants.png",
+        filename = "__wood-logistics__/graphics/entity/wood-underground-belt/remnants/wood-underground-belt-remnants.png",
         line_length = 1,
         width = 156,
         height = 144,
@@ -75,7 +75,7 @@ if settings.startup["wood-logistics-belts"].value then
       final_render_layer = "remnants",
       remove_on_tile_placement = false,
       animation = {
-        filename = "__wood-logistics__/graphics/entity/wood-splitter/remnants/hr-wood-splitter-remnants.png",
+        filename = "__wood-logistics__/graphics/entity/wood-splitter/remnants/wood-splitter-remnants.png",
         line_length = 1,
         width = 190,
         height = 190,

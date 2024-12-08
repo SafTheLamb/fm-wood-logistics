@@ -4,7 +4,7 @@ if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
   AAILoaders.make_tier{
     name = "wood",
     transport_belt = "wood-transport-belt",
-    color = {160, 110, 90},
+    color = {123, 73, 54},
     fluid = "steam",
     fluid_per_minute = 7.5,
     fluid_technology_prerequisites = mods["aai-industry"] and {"steam-power"} or nil,
@@ -43,7 +43,7 @@ if mods["vanilla-loaders-hd"] then
     vanilla_loaders_api.create_loader("wood-loader", "wood-transport-belt", {
       technology = "wood-logistics",
       mask_tint = util.color("a06e5ad1"),
-      base_tint = util.color("cc6a47"),
+      base_tint = util.color("7B4936"),
       ingredients = {
         {type="item", name=wood_item, amount=5},
         {type="item", name="copper-cable", amount=10},

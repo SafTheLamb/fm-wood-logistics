@@ -8,7 +8,7 @@ if settings.startup["wood-logistics-belts"].value then
   {
     animation_set =
     {
-      filename = "__wood-logistics__/graphics/entity/wood-transport-belt/hr-wood-transport-belt.png",
+      filename = "__wood-logistics__/graphics/entity/wood-transport-belt/wood-transport-belt.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -104,7 +104,7 @@ if settings.startup["wood-logistics-belts"].value then
       structure = {
         direction_in = {
           sheet = {
-            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
             priority = "extra-high",
             width = 192,
             height = 192,
@@ -114,7 +114,7 @@ if settings.startup["wood-logistics-belts"].value then
         },
         direction_out = {
           sheet = {
-            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
             priority = "extra-high",
             width = 192,
             height = 192,
@@ -123,7 +123,7 @@ if settings.startup["wood-logistics-belts"].value then
         },
         direction_in_side_loading = {
           sheet = {
-            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
             priority = "extra-high",
             width = 192,
             height = 192,
@@ -133,7 +133,7 @@ if settings.startup["wood-logistics-belts"].value then
         },
         direction_out_side_loading = {
           sheet = {
-            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/hr-wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
             priority = "extra-high",
             width = 192,
             height = 192,
@@ -187,7 +187,7 @@ if settings.startup["wood-logistics-belts"].value then
       working_sound = sounds.splitter,
       structure = {
         north = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-north.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-north.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -197,7 +197,7 @@ if settings.startup["wood-logistics-belts"].value then
           scale = 0.5
         },
         east = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-east.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-east.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -207,7 +207,7 @@ if settings.startup["wood-logistics-belts"].value then
           scale = 0.5
         },
         south = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-south.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-south.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -217,7 +217,7 @@ if settings.startup["wood-logistics-belts"].value then
           scale = 0.5
         },
         west = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-west.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-west.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -230,7 +230,7 @@ if settings.startup["wood-logistics-belts"].value then
       structure_patch = {
         north = util.empty_sprite(),
         east = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-east-top_patch.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-east-top_patch.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -241,7 +241,7 @@ if settings.startup["wood-logistics-belts"].value then
         },
         south = util.empty_sprite(),
         west = {
-          filename = "__wood-logistics__/graphics/entity/wood-splitter/hr-wood-splitter-west-top_patch.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-west-top_patch.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",

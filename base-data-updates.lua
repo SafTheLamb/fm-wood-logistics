@@ -4,10 +4,6 @@ local frep = require("__fdsl__.lib.recipe")
 
 if settings.startup["wood-logistics-belts"].value then
   if mods["aai-loaders"] then
-    table.insert(data.raw.item["aai-wood-loader"].icons, {
-      icon = "__wood-logistics__/graphics/icons/aai-wood-loader-overlay.png",
-      icon_size = 64
-    })
     data.raw.item["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
   end
 end
