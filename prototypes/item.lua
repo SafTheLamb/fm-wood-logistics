@@ -14,7 +14,9 @@ if settings.startup["wood-logistics-lumber"].value then
       subgroup = "intermediate-product",
       order = "A[basic-intermediates]-c[lumber]",
       stack_size = 100,
-      random_tint_color = {1.0, 0.95, 0.9, 1.0}
+      random_tint_color = {1.0, 0.95, 0.9, 1.0},
+      fuel_category = "chemical",
+      fuel_value = "4MJ"
     }
   })
 end
