@@ -175,6 +175,72 @@ if settings.startup["wood-logistics-belts"].value then
   })
 end
 
+-------------------------------------------------------------------------- Trains
+
+if settings.startup["wood-logistics-cargo-wagon"].value then
+  data:extend({
+    {
+      type = "explosion",
+      name = "wood-cargo-wagon-explosion",
+      icon = "__wood-logistics__/graphics/icons/wood-cargo-wagon.png",
+      flags = {"not-on-map"},
+      hidden = true,
+      subgroup = "train-transport-explosions",
+      order = "e-g-a",
+      height = 0,
+      animations = explosion_animations.medium_explosion(),
+      smoke = "smoke-fast",
+      smoke_count = 2,
+      smoke_slow_down_factor = 1,
+      sound = sounds.large_explosion(0.8),
+      created_effect = {
+        type = "direct",
+        action_delivery = {
+          type = "instant",
+          target_effects = {
+            {
+              type = "create-particle",
+              repeat_count = 36,
+              particle_name = "wooden-chest-wooden-splinter-particle-medium",
+              offset_deviation = { { -0.3984, -0.3984 }, { 0.3984, 0.3984 } },
+              initial_height = 0.4,
+              initial_height_deviation = 0.5,
+              initial_vertical_speed = 0.11,
+              initial_vertical_speed_deviation = 0.05,
+              speed_from_center = 0.04,
+              speed_from_center_deviation = 0.05
+            },
+            {
+              type = "create-particle",
+              repeat_count = 37,
+              particle_name = "transport-belt-wooden-splinter-particle-medium",
+              offset_deviation = { { -0.5977, -0.5977 }, { 0.5977, 0.5977 } },
+              initial_height = 1,
+              initial_height_deviation = 0.5,
+              initial_vertical_speed = 0.109,
+              initial_vertical_speed_deviation = 0.05,
+              speed_from_center = 0.05,
+              speed_from_center_deviation = 0.05
+            },
+            {
+              type = "create-particle",
+              repeat_count = 35,
+              particle_name = "rail-wooden-splinter-particle-medium",
+              offset_deviation = { { -0.5977, -0.5977 }, { 0.5977, 0.5977 } },
+              initial_height = 1,
+              initial_height_deviation = 0.5,
+              initial_vertical_speed = 0.114,
+              initial_vertical_speed_deviation = 0.05,
+              speed_from_center = 0.05,
+              speed_from_center_deviation = 0.05
+            }
+          }
+        }
+      }
+    }
+  })
+end
+
 -------------------------------------------------------------------------- Electric poles
 
 if settings.startup["wood-logistics-big-electric-pole"].value then

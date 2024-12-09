@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.2
+  Major Features:
+    - New Wooden Cargo Wagons. Locks vanilla cargo wagons behind Vulcanus if Space Age is enabled
+  Graphics:
+    - Updated Wooden transport belt graphics, courtesy of cackling.fiend
+  Sounds:
+    - Added custom sounds for Wooden transport belts and the new wooden cargo wagon
+    - Give items missing item sounds
+  Changes:
+    - Add missing fuel value to lumber
+
+---------------------------------------------------------------------------------------------------
 Version: 2.1.1
   Changes:
     - Change lab recipe to fix impossible progression

@@ -15,6 +15,22 @@ data:extend({
     default_value = true,
     order = "b[logistics]-a[belts]"
   },
+  -- add wood to inserter recipe
+  {
+    type = "bool-setting",
+    name = "wood-logistics-inserter",
+    setting_type = "startup",
+    default_value = true,
+    order = "b[logistics]-b[inserters]"
+  },
+  -- add wooden cargo wagon
+  {
+    type = "bool-setting",
+    name = "wood-logistics-cargo-wagon",
+    setting_type = "startup",
+    default_value = true,
+    order = "b[logistics]-c[trains]-a[wagon]"
+  },
   -- add wood to rails recipe
   {
     type = "int-setting",
@@ -22,15 +38,7 @@ data:extend({
     setting_type = "startup",
     default_value = 1,
     minimum_value = 0,
-    order = "b[logistics]-b[rails]"
-  },
-  -- add wood to inserter recipe
-  {
-    type = "bool-setting",
-    name = "wood-logistics-inserter",
-    setting_type = "startup",
-    default_value = true,
-    order = "b[logistics]-c[inserters]"
+    order = "b[logistics]-c[trains]-b[rails]"
   },
   -- add wood to assembling machine 1
   {
@@ -63,6 +71,6 @@ data:extend({
     setting_type = "startup",
     default_value = 2,
     minimum_value = 0,
-    order = "e[repair-pack]"
-  }
+    order = "z[misc]-a[repair-pack]"
+  },
 })

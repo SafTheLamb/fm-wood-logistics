@@ -15,6 +15,14 @@ if settings.startup["wood-logistics-belts"].value then
   end
 end
 
+if settings.startup["wood-logistics-cargo-wagon"].value then
+  ftech.add_unlock("railway", "wood-cargo-wagon")
+  if mods["space-age"] then
+    ftech.add_unlock("tungsten-steel", "cargo-wagon")
+    ftech.remove_unlock("railway", "cargo-wagon")
+  end
+end
+
 if settings.startup["wood-logistics-big-electric-pole"].value then
   if mods["aai-industry"] then
     ftech.add_prereq("wood-electric-energy-distribution", "electricity")

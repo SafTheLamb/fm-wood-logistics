@@ -1,4 +1,5 @@
 local frep = require("__fdsl__.lib.recipe")
+local fentity = require("__fdsl__.lib.entity")
 
 -------------------------------------------------------------------------- Item changes
 
@@ -10,6 +11,10 @@ end
 
 if mods["big-wooden-pole"] then
   data.raw.item["big-wooden-pole"].order = "a[energy]-c[big-electric-pole]a"
+end
+
+if settings.startup["wood-logistics-cargo-wagon"].value then
+  data.raw["item-with-entity-data"]["cargo-wagon"].order = "c[rolling-stock]-b[cargo-wagon]b"
 end
 
 if settings.startup["wood-logistics-big-electric-pole"].value then
@@ -50,6 +55,13 @@ if settings.startup["wood-logistics-belts"].value then
   end
   if mods["vanilla-loaders-hd"] then
     frep.replace_ingredient("loader", "iron-gear-wheel", {type="item", name="wood-loader", amount=1})
+  end
+end
+
+if settings.startup["wood-logistics-cargo-wagon"].value then
+  frep.add_ingredient("cargo-wagon", {type="item", name="wood-cargo-wagon", amount=1})
+  if mods["space-age"] then
+    frep.replace_ingredient("cargo-wagon", "iron-plate", "tungsten-plate")
   end
 end
 
@@ -107,36 +119,24 @@ local wood_entities = {
   ["electric-pole"] = {"small-electric-pole", "big-wooden-pole", "big-wood-electric-pole"},
   ["transport-belt"] = {"wood-transport-belt"},
   ["underground-belt"] = {"wood-underground-belt"},
-  ["splitter"] = {"wood-splitter"}
+  ["splitter"] = {"wood-splitter"},
+  ["cargo-wagon"] = {"wood-cargo-wagon"}
 }
 
-for type,list in pairs(wood_entities) do
-  for _,entity_name in pairs(list) do
-    local entity = data.raw[type][entity_name]
+for entity_type,entity_list in pairs(wood_entities) do
+  for _,entity_name in pairs(entity_list) do
+    local entity = data.raw[entity_type][entity_name]
     if entity then
-      if not entity.resistances then entity.resistances = {} end
-      local missing = true
-      for _,resistance in pairs(entity.resistances) do
-        if resistance.type == "fire" then
-          missing = false
-          resistance.percent = -90
-          break
-        end
-      end
-      if missing then
-        table.insert(entity.resistances, {type="fire", percent=-90})
-      end
+      entity.resistances = {{type="fire", percent=-90}}
     end
   end
 end
 
 if mods["space-age"] then
-  for type,list in pairs(wood_entities) do
-    for _,entity_name in pairs(list) do
-      local entity = data.raw[type][entity_name]
-      if entity then
-        entity.surface_conditions = {{property="pressure", min=1000, max=2000}}
-      end
+  for entity_type,entity_list in pairs(wood_entities) do
+    for _,entity_name in pairs(entity_list) do
+      fentity.set_surface_condition(entity_type, entity_name, {property="gravity", min=1})
+      fentity.set_surface_condition(entity_type, entity_name, {property="pressure", max=2000})
     end
   end
 end

@@ -55,7 +55,27 @@ if settings.startup["wood-logistics-belts"].value then
   })
 end
 
+-------------------------------------------------------------------------- Trains
+
+if settings.startup["wood-logistics-cargo-wagon"].value then
+  data:extend({
+    {
+      type = "recipe",
+      name = "wood-cargo-wagon",
+      energy_required = 1,
+      enabled = false,
+      ingredients = {
+        {type="item", name="iron-gear-wheel", amount=10},
+        {type="item", name="copper-plate", amount=10},
+        {type="item", name=wood_item, amount=20}
+      },
+      results = {{type="item", name="wood-cargo-wagon", amount=1}}
+    }
+  })
+end
+
 -------------------------------------------------------------------------- Electric poles
+
 if settings.startup["wood-logistics-big-electric-pole"].value then
   data:extend({
     {
