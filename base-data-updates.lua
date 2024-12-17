@@ -34,6 +34,14 @@ if wood_item == "lumber" then
   end
 end
 
+if settings.startup["wood-logistics-lumber-mill"].value then
+  data.raw.recipe["wooden-chest"].category = "crafting-or-carpentry"
+  data.raw.recipe["small-electric-pole"].category = "crafting-or-carpentry"
+  if mods["big-wooden-pole"] then
+    data.raw.recipe["big-wooden-pole"].category = "crafting-or-carpentry"
+  end
+end
+
 if settings.startup["wood-logistics-belts"].value then
   if mods["aai-industry"] then
     frep.add_ingredient("transport-belt", {type="item", name="wood-transport-belt", amount=2})
@@ -114,7 +122,25 @@ if mods["big-wooden-pole"] then
   data.raw["electric-pole"]["big-wooden-pole"].maximum_wire_distance = 16
 end
 
+if settings.startup["wood-logistics-lumber-mill"].value then
+  table.insert(data.raw.character.character.crafting_categories, "crafting-or-carpentry")
+  table.insert(data.raw["god-controller"].default.crafting_categories, "crafting-or-carpentry")
+  table.insert(data.raw["god-controller"].default.crafting_categories, "advanced-crafting-or-carpentry")
+  
+  if mods["aai-industry"] then
+    table.insert(data.raw["assembling-machine"]["burner-assembling-machine"].crafting_categories, "crafting-or-carpentry")
+  end
+  table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "crafting-or-carpentry")
+  table.insert(data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories, "crafting-or-carpentry")
+  table.insert(data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories, "advanced-crafting-or-carpentry")
+  table.insert(data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories, "crafting-or-carpentry")
+  table.insert(data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories, "advanced-crafting-or-carpentry")
+end
+
+-- Update all wooden entities to be weak to fire and unable to be placed in space or on vulcanus
+
 local wood_entities = {
+  ["assembling-machine"] = {"lumber-mill"},
   ["container"] = {"wooden-chest"},
   ["electric-pole"] = {"small-electric-pole", "big-wooden-pole", "big-wood-electric-pole"},
   ["transport-belt"] = {"wood-transport-belt"},

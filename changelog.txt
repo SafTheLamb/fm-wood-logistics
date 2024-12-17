@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.0
+  Major Features:
+    - New Lumber Mill, credit to Hurricane for the wonderful graphics!
+
+---------------------------------------------------------------------------------------------------
 Version: 2.1.2
   Major Features:
     - New Wooden Cargo Wagons. Locks vanilla cargo wagons behind Vulcanus if Space Age is enabled

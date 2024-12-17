@@ -23,7 +23,6 @@ if settings.startup["wood-logistics-belts"].value then
       type = "transport-belt",
       name = "wood-transport-belt",
       icon = "__wood-logistics__/graphics/icons/wood-transport-belt.png",
-      icon_size = 64, icon_mipmaps = 4,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 0.1, result = "wood-transport-belt"},
       max_health = 100,
@@ -57,7 +56,6 @@ if settings.startup["wood-logistics-belts"].value then
       type = "underground-belt",
       name = "wood-underground-belt",
       icon = "__wood-logistics__/graphics/icons/wood-underground-belt.png",
-      icon_size = 64, icon_mipmaps = 4,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 0.1, result = "wood-underground-belt"},
       max_health = 100,
@@ -165,7 +163,6 @@ if settings.startup["wood-logistics-belts"].value then
       type = "splitter",
       name = "wood-splitter",
       icon = "__wood-logistics__/graphics/icons/wood-splitter.png",
-      icon_size = 64, icon_mipmaps = 4,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 0.1, result = "wood-splitter"},
       max_health = 120,
@@ -252,6 +249,92 @@ if settings.startup["wood-logistics-belts"].value then
         }
       }
     },
+  })
+end
+
+-------------------------------------------------------------------------- Lumber mill
+
+if settings.startup["wood-logistics-lumber-mill"].value then
+  data:extend({
+    {
+      type = "assembling-machine",
+      name = "lumber-mill",
+      icon = "__wood-logistics__/graphics/icons/lumber-mill.png",
+      flags = {"placeable-neutral", "placeable-player", "player-creation"},
+      minable = {mining_time=0.2, result="lumber-mill"},
+      fast_replaceable_group = "lumber-mill",
+      max_health = 350,
+      corpse = "lumber-mill-remnants",
+      dying_explosion = "lumber-mill-explosion",
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions.create_vector(universal_connector_template, {
+        {variation=15, main_offset=util.by_pixel(56, 52), shadow_offset=util.by_pixel(70, 85), show_shadow=false},
+        {variation=15, main_offset=util.by_pixel(56, 52), shadow_offset=util.by_pixel(70, 85), show_shadow=false},
+        {variation=15, main_offset=util.by_pixel(56, 52), shadow_offset=util.by_pixel(70, 85), show_shadow=false},
+        {variation=15, main_offset=util.by_pixel(56, 52), shadow_offset=util.by_pixel(70, 85), show_shadow=false},
+      }),
+      collision_box = {{-2.7, -2.7}, {2.7, 2.7}},
+      selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+      heating_energy = "100kW",
+      damaged_trigger_effect = hit_effects.entity(),
+      effect_receiver = {base_effect={productivity=0.5}},
+      module_slots = 6,
+      icon_draw_specification = {scale=2},
+      icons_positioning = {
+        {inventory_index=defines.inventory.assembling_machine_modules, shift={0, 1.25}}
+      },
+      allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
+      crafting_categories = {"carpentry", "crafting-or-carpentry"},
+      crafting_speed = 2,
+      energy_source = {
+        type = "electric",
+        usage_priority = "secondary-input",
+        emissions_per_minute = {pollution=3}
+      },
+      energy_usage = "600kW",
+      open_sound = sounds.machine_open,
+      close_sound = sounds.machine_close,
+      impact_category = "wood",
+      perceived_performance = {minimum=0.25, performance_to_activity_rate=0.25, maximum=8},
+      graphics_set = {
+        animation = {
+          layers = {
+            util.sprite_load("__wood-logistics__/graphics/entity/lumber-mill/lumber-mill-animation", {
+              frame_count = 80,
+              animation_speed = 0.32,
+              scale = 0.5
+            }),
+            util.sprite_load("__wood-logistics__/graphics/entity/lumber-mill/lumber-mill-shadow", {
+              draw_as_shadow = true,
+              repeat_count = 80,
+              scale = 0.5
+            }),
+          }
+        },
+        working_visualizations = {
+          {
+            effect = "flicker",
+            fadeout = true,
+            animation = util.sprite_load("__wood-logistics__/graphics/entity/lumber-mill/lumber-mill-emission", {
+              draw_as_glow = true,
+              blend_mode = "additive",
+              frame_count = 80,
+              animation_speed = 0.32,
+              scale = 0.5
+            })
+          }
+        }
+      },
+      working_sound = {
+        sound = {
+          filename = "__space-age__/sound/entity/foundry/foundry.ogg", volume = 0.5
+        },
+        fade_in_ticks = 4,
+        fade_out_ticks = 20,
+        audible_distance_modifier = 0.6,
+        max_sounds_per_type = 2
+      }
+    }
   })
 end
 
@@ -425,7 +508,6 @@ if settings.startup["wood-logistics-big-electric-pole"].value then
       type = "electric-pole",
       name = "big-wood-electric-pole",
       icon = "__wood-logistics__/graphics/icons/big-wood-electric-pole.png",
-      icon_size = 64, icon_mipmaps = 4,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 0.1, result = "big-wood-electric-pole"},
       max_health = 150,
@@ -465,56 +547,7 @@ if settings.startup["wood-logistics-big-electric-pole"].value then
           }
         }
       },
-      connection_points = {
-        {
-          shadow = {
-            copper = util.by_pixel_hr(245.0, -34.0),
-            red = util.by_pixel_hr(301.0, -0.0),
-            green = util.by_pixel_hr(206.0, -0.0)
-          },
-          wire = {
-            copper = util.by_pixel_hr(0, -246.0),
-            red = util.by_pixel_hr(58.0, -211.0),
-            green = util.by_pixel_hr(-58.0, -211.0)
-          }
-        },
-        {
-          shadow = {
-            copper = util.by_pixel_hr(279.0, -24.0),
-            red = util.by_pixel_hr(284.0, 28.0),
-            green = util.by_pixel_hr(204.0, -31.0)
-          },
-          wire = {
-            copper = util.by_pixel_hr(34.0, -235.0),
-            red = util.by_pixel_hr(41.0, -183.0),
-            green = util.by_pixel_hr(-40.0, -240.0)
-          }
-        },
-        {
-          shadow = {
-            copper = util.by_pixel_hr(292.0, 0.0),
-            red = util.by_pixel_hr(244.0, 41.0),
-            green = util.by_pixel_hr(244.0, -41.0)
-          },
-          wire = {
-            copper = util.by_pixel_hr(47.0, -212.0),
-            red = util.by_pixel_hr(1.0, -170.0),
-            green = util.by_pixel_hr(1.0, -251.0)
-          }
-        },
-        {
-          shadow = {
-            copper = util.by_pixel_hr(277.0, 23.0),
-            red = util.by_pixel_hr(204.0, 30.0),
-            green = util.by_pixel_hr(286.0, -29.0)
-          },
-          wire = {
-            copper = util.by_pixel_hr(33.0, -188.0),
-            red = util.by_pixel_hr(-41.0, -182.5),
-            green = util.by_pixel_hr(41.0, -239.0)
-          }
-        }
-      },
+      connection_points = data.raw["electric-pole"]["big-electric-pole"].connection_points,
       radius_visualisation_picture = {
         filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",
         width = 12,

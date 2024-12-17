@@ -15,6 +15,14 @@ if settings.startup["wood-logistics-belts"].value then
   end
 end
 
+if settings.startup["wood-logistics-lumber-mill"].value then
+  if mods["space-age"] then
+    ftech.add_prereq("advanced-carpentry", "carbon-fiber")
+    ftech.add_cost_ingredient("advanced-carpentry", "space-science-pack")
+    ftech.add_cost_ingredient("advanced-carpentry", "agricultural-science-pack")
+  end
+end
+
 if settings.startup["wood-logistics-cargo-wagon"].value then
   ftech.add_unlock("railway", "wood-cargo-wagon")
   if mods["space-age"] then

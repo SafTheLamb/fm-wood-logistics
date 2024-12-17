@@ -27,6 +27,22 @@ if settings.startup["wood-logistics-lumber"].value then
   })
 end
 
+-------------------------------------------------------------------------- Lumber mill
+
+if settings.startup["wood-logistics-lumber-mill"].value then
+  data:extend({
+    {
+      type = "item",
+      name = "lumber-mill",
+      icon = "__wood-logistics__/graphics/icons/lumber-mill.png",
+      subgroup = "production-machine",
+      order = "eb[lumber-mill]",
+      place_result = "lumber-mill",
+      stack_size = 20,
+    },
+  })
+end
+
 -------------------------------------------------------------------------- Transport belts
 
 if settings.startup["wood-logistics-belts"].value then

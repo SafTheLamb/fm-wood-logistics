@@ -90,6 +90,40 @@ if settings.startup["wood-logistics-belts"].value then
   })
 end
 
+-------------------------------------------------------------------------- Lumber mill
+
+if settings.startup["wood-logistics-lumber-mill"].value then
+  data:extend({
+    {
+      type = "corpse",
+      name = "lumber-mill-remnants",
+      icon = "__wood-logistics__/graphics/icons/lumber-mill.png",
+      flags = {"placeable-neutral", "not-on-map"},
+      hidden_in_factoriopedia = true,
+      subgroup = "production-machine-remnants",
+      order = "f[lumber-mill]",
+      selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+      tile_width = 6,
+      tile_height = 6,
+      selectable_in_game = false,
+      time_before_removed = 60 * 60 * 15, -- 15 minutes
+      expires = false,
+      final_render_layer = "remnants",
+      remove_on_tile_placement = false,
+      animation = {
+        filename = "__space-age__/graphics/entity/foundry/foundry-remnants.png",
+        line_length = 1,
+        width = 494,
+        height = 478,
+        frame_count = 1,
+        direction_count = 1,
+        shift = util.by_pixel( -1.5, -6.5),
+        scale = 0.6
+      }
+    },
+  })
+end
+
 -------------------------------------------------------------------------- Trains
 
 if settings.startup["wood-logistics-cargo-wagon"].value then

@@ -41,6 +41,31 @@ if settings.startup["wood-logistics-belts"].value then
   })
 end
 
+-------------------------------------------------------------------------- Lumber mill
+
+if settings.startup["wood-logistics-lumber-mill"].value then
+  data:extend({
+    {
+      type = "technology",
+      name = "advanced-carpentry",
+      icon = "__wood-logistics__/graphics/technology/lumber-mill.png",
+      icon_size = 256, icon_mipmaps = 4,
+      effects = {{type="unlock-recipe", recipe="lumber-mill"}},
+      prerequisites = {"automation-3"},
+      unit = {
+        count = 250,
+        ingredients = {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+        },
+        time = 60
+      }
+    },
+  })
+end
+
 -------------------------------------------------------------------------- Electric poles
 
 if settings.startup["wood-logistics-big-electric-pole"].value then

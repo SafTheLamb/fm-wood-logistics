@@ -1,16 +1,19 @@
+local wood_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
+local recipe_category = settings.startup["wood-logistics-lumber-mill"].value and "crafting-or-carpentry" or "crafting"
+
 -------------------------------------------------------------------------- Intermediates
 
-local wood_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
-if wood_item == "lumber" then
+if settings.startup["wood-logistics-lumber"].value then
   data:extend({
     {
       type = "recipe",
       name = "lumber",
+      category = recipe_category,
+      allow_productivity = true,
       ingredients = {
         mods["expensive-mode"] and {type="item", name="wood", amount=4} or {type="item", name="wood", amount=2}
       },
       results = {{type="item", name="lumber", amount=1}},
-      allow_productivity = true
     }
   })
 end
@@ -23,6 +26,7 @@ if settings.startup["wood-logistics-belts"].value then
       type = "recipe",
       name = "wood-transport-belt",
       enabled = not mods["aai-industry"],
+      category = recipe_category,
       ingredients = {
         {type="item", name=wood_item, amount=1},
         {type="item", name="copper-cable", amount=2}
@@ -32,6 +36,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "recipe",
       name = "wood-underground-belt",
+      category = recipe_category,
       enabled = false,
       energy_required = 1,
       ingredients = {
@@ -43,6 +48,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "recipe",
       name = "wood-splitter",
+      category = recipe_category,
       enabled = false,
       energy_required = 1,
       ingredients = {
@@ -55,6 +61,27 @@ if settings.startup["wood-logistics-belts"].value then
   })
 end
 
+-------------------------------------------------------------------------- Lumber mill
+
+if settings.startup["wood-logistics-lumber-mill"].value then
+  data:extend({
+    {
+      type = "recipe",
+      name = "lumber-mill",
+      category = "advanced-crafting-or-carpentry",
+      enabled = false,
+      energy_required = 20,
+      ingredients = {
+        {type="item", name=wood_item, amount=80},
+        mods["space-age"] and {type="item", name="carbon-fiber", amount=20} or {type="item", name="steel-plate", amount=40},
+        {type="item", name="processing-unit", amount=10},
+        {type="item", name="electric-engine-unit", amount=5}
+      },
+      results = {{type="item", name="lumber-mill", amount=1}}
+    }
+  })
+end
+
 -------------------------------------------------------------------------- Trains
 
 if settings.startup["wood-logistics-cargo-wagon"].value then
@@ -62,6 +89,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
     {
       type = "recipe",
       name = "wood-cargo-wagon",
+      category = recipe_category,
       energy_required = 1,
       enabled = false,
       ingredients = {
@@ -81,6 +109,7 @@ if settings.startup["wood-logistics-big-electric-pole"].value then
     {
       type = "recipe",
       name = "big-wood-electric-pole",
+      category = recipe_category,
       enabled = false,
       ingredients = {
         {type="item", name="small-electric-pole", amount=2},

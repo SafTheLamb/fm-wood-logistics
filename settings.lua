@@ -5,7 +5,14 @@ data:extend({
     name = "wood-logistics-lumber",
     setting_type = "startup",
     default_value = true,
-    order = "a[items]-a[lumber]"
+    order = "a[lumber]-a[item]"
+  },
+  {
+    type = "bool-setting",
+    name = "wood-logistics-lumber-mill",
+    setting_type = "startup",
+    default_value = true,
+    order = "a[lumber]-b[mill]"
   },
   -- add wood-tier belts, or simply add wood to belt recipes
   {
