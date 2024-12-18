@@ -275,7 +275,6 @@ if settings.startup["wood-logistics-lumber-mill"].value then
       }),
       collision_box = {{-2.7, -2.7}, {2.7, 2.7}},
       selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
-      heating_energy = "100kW",
       damaged_trigger_effect = hit_effects.entity(),
       effect_receiver = {base_effect={productivity=0.5}},
       module_slots = 6,
@@ -327,7 +326,8 @@ if settings.startup["wood-logistics-lumber-mill"].value then
       },
       working_sound = {
         sound = {
-          filename = "__space-age__/sound/entity/foundry/foundry.ogg", volume = 0.5
+          filename = mods["space-age"] and "__space-age__/sound/entity/foundry/foundry.ogg" or "__base__/sound/assembling-machine-t3-1.ogg",
+          volume = 0.5
         },
         fade_in_ticks = 4,
         fade_out_ticks = 20,

@@ -230,7 +230,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
               type = "create-particle",
               repeat_count = 10,
               probability = 1,
-              particle_name = "foundry-metal-particle-big",
+              particle_name = "oil-refinery-metal-particle-medium",
               offsets ={
                 {-1.492, -1.453},
                 {1.555, -1.469},
@@ -249,7 +249,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
               type = "create-particle",
               repeat_count = 35,
               probability = 1,
-              particle_name = "foundry-metal-particle-medium",
+              particle_name = "oil-refinery-long-metal-particle-medium",
               offsets = {{-0.02344, -0.8984}},
               offset_deviation = {{-0.5, -0.2969}, {0.5, 0.2969}},
               initial_height = 0.7,

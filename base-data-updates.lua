@@ -123,6 +123,9 @@ if mods["big-wooden-pole"] then
 end
 
 if settings.startup["wood-logistics-lumber-mill"].value then
+  if mods["space-age"] then
+    data.raw["assembling-machine"]["lumber-mill"].heating_energy = "100kW"
+  end
   table.insert(data.raw.character.character.crafting_categories, "crafting-or-carpentry")
   table.insert(data.raw["god-controller"].default.crafting_categories, "crafting-or-carpentry")
   table.insert(data.raw["god-controller"].default.crafting_categories, "advanced-crafting-or-carpentry")

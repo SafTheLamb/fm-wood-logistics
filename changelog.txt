@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.1
+  Bugfixes:
+    - Fix dependence on Space Age assets
+
+---------------------------------------------------------------------------------------------------
 Version: 2.2.0
   Major Features:
     - New Lumber Mill, credit to Hurricane for the wonderful graphics!

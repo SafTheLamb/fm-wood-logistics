@@ -4,6 +4,8 @@ for _,force in pairs(game.forces) do
 
   if settings.startup["wood-logistics-cargo-wagon"].value then
     recipes["wood-cargo-wagon"].enabled = technologies["railway"].researched
-    recipes["cargo-wagon"].enabled = technologies["tungsten-steel"].researched
+    if script.active_mods["space-age"] then
+      recipes["cargo-wagon"].enabled = technologies["tungsten-steel"].researched
+    end
   end
 end

@@ -111,10 +111,10 @@ if settings.startup["wood-logistics-lumber-mill"].value then
       final_render_layer = "remnants",
       remove_on_tile_placement = false,
       animation = {
-        filename = "__space-age__/graphics/entity/foundry/foundry-remnants.png",
+        filename = mods["space-age"] and "__space-age__/graphics/entity/foundry/foundry-remnants.png" or "__base__/graphics/entity/oil-refinery/remnants/refinery-remnants.png",
         line_length = 1,
-        width = 494,
-        height = 478,
+        width = mods["space-age"] and 494 or 467,
+        height = mods["space-age"] and 478 or 415,
         frame_count = 1,
         direction_count = 1,
         shift = util.by_pixel( -1.5, -6.5),
