@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.2
+  Changes:
+    - Update thumbnail!
+  Bugfixes:
+    - Add compatibility with Wood-Walls when Lumber is enabled
+    - Fix compat with Hot metals
+
+---------------------------------------------------------------------------------------------------
 Version: 2.2.1
   Bugfixes:
     - Fix dependence on Space Age assets
