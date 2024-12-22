@@ -152,7 +152,8 @@ local wood_entities = {
   ["transport-belt"] = {"wood-transport-belt"},
   ["underground-belt"] = {"wood-underground-belt"},
   ["splitter"] = {"wood-splitter"},
-  ["cargo-wagon"] = {"wood-cargo-wagon"}
+  ["cargo-wagon"] = {"wood-cargo-wagon"},
+  ["wall"] = {"wooden-wall"}
 }
 
 for entity_type,entity_list in pairs(wood_entities) do

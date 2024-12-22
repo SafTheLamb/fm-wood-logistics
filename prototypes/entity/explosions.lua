@@ -8,7 +8,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "explosion",
       name = "wood-transport-belt-explosion",
-      icon = "__wood-logistics__/graphics/icons/wood-transport-belt.png",
+      icon = "__wood-base-assets__/graphics/icons/wood-transport-belt.png",
       icon_size = 64, icon_mipmaps = 4,
       flags = {"not-on-map"},
       subgroup = "belt-explosions",
@@ -56,7 +56,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "explosion",
       name = "wood-underground-belt-explosion",
-      icon = "__wood-logistics__/graphics/icons/wood-underground-belt.png",
+      icon = "__wood-base-assets__/graphics/icons/wood-underground-belt.png",
       icon_size = 64, icon_mipmaps = 4,
       flags = {"not-on-map"},
       subgroup = "belt-explosions",
@@ -104,7 +104,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "explosion",
       name = "wood-splitter-explosion",
-      icon = "__wood-logistics__/graphics/icons/wood-splitter.png",
+      icon = "__wood-base-assets__/graphics/icons/wood-splitter.png",
       icon_size = 64, icon_mipmaps = 4,
       flags = {"not-on-map"},
       subgroup = "belt-explosions",
@@ -182,7 +182,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
     {
       type = "explosion",
       name = "lumber-mill-explosion",
-      icon = "__wood-logistics__/graphics/icons/lumber-mill.png",
+      icon = "__wood-base-assets__/graphics/icons/lumber-mill.png",
       flags = {"not-on-map"},
       hidden = true,
       subgroup = "production-machine-explosions",
@@ -285,7 +285,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
     {
       type = "explosion",
       name = "wood-cargo-wagon-explosion",
-      icon = "__wood-logistics__/graphics/icons/wood-cargo-wagon.png",
+      icon = "__wood-base-assets__/graphics/icons/wood-cargo-wagon.png",
       flags = {"not-on-map"},
       hidden = true,
       subgroup = "train-transport-explosions",
@@ -351,7 +351,7 @@ if settings.startup["wood-logistics-big-electric-pole"].value then
     {
       type = "explosion",
       name = "big-wood-electric-pole-explosion",
-      icon = "__wood-logistics__/graphics/icons/big-wood-electric-pole.png",
+      icon = "__wood-base-assets__/graphics/icons/big-wood-electric-pole.png",
       icon_size = 64, icon_mipmaps = 4,
       flags = {"not-on-map"},
       subgroup = "energy-pipe-distribution-explosions",
