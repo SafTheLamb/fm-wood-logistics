@@ -46,13 +46,15 @@ if settings.startup["wood-logistics-lumber-mill"].value then
 end
 
 if settings.startup["wood-logistics-belts"].value then
-  if mods["aai-industry"] then
-    frep.add_ingredient("transport-belt", {type="item", name="wood-transport-belt", amount=2})
-  else
-    frep.replace_ingredient("transport-belt", "iron-plate", {type="item", name="wood-transport-belt", amount=2})
+  if settings.startup["wood-logistics-belts-modify"].value then
+    if mods["aai-industry"] then
+      frep.add_ingredient("transport-belt", {type="item", name="wood-transport-belt", amount=2})
+    else
+      frep.replace_ingredient("transport-belt", "iron-plate", {type="item", name="wood-transport-belt", amount=2})
+    end
+    frep.replace_ingredient("underground-belt", "transport-belt", {type="item", name="wood-underground-belt", amount=2})
+    frep.replace_ingredient("splitter", "transport-belt", {type="item", name="wood-splitter", amount=1})
   end
-  frep.replace_ingredient("underground-belt", "transport-belt", {type="item", name="wood-underground-belt", amount=2})
-  frep.replace_ingredient("splitter", "transport-belt", {type="item", name="wood-splitter", amount=1})
 
   if not mods["aai-industry"] then
     frep.replace_ingredient("lab", "transport-belt", "inserter")
@@ -62,10 +64,14 @@ if settings.startup["wood-logistics-belts"].value then
 
   if mods["aai-loaders"] then
     data.raw.recipe["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
-    frep.replace_ingredient("aai-loader", "transport-belt", "aai-wood-loader")
+    if settings.startup["wood-logistics-belts-modify"].value then
+      frep.replace_ingredient("aai-loader", "transport-belt", "aai-wood-loader")
+    end
   end
   if mods["vanilla-loaders-hd"] then
-    frep.replace_ingredient("loader", "iron-gear-wheel", {type="item", name="wood-loader", amount=1})
+    if settings.startup["wood-logistics-belts-modify"].value then
+      frep.replace_ingredient("loader", "iron-gear-wheel", {type="item", name="wood-loader", amount=1})
+    end
   end
 end
 
@@ -100,9 +106,11 @@ if settings.startup["wood-logistics-assembling-machine"].value then
 end
 
 if settings.startup["wood-logistics-big-electric-pole"].value then
-  frep.add_ingredient("big-electric-pole", {type="item", name="big-wood-electric-pole", amount=1})
-  if mods["big-wooden-pole"] then
-    frep.replace_ingredient("big-wood-electric-pole", "small-electric-pole", "big-wooden-pole")
+  if settings.startup["wood-logistics-big-electric-pole-modify"].value then
+    frep.add_ingredient("big-electric-pole", {type="item", name="big-wood-electric-pole", amount=1})
+    if mods["big-wooden-pole"] then
+      frep.replace_ingredient("big-wood-electric-pole", "small-electric-pole", "big-wooden-pole")
+    end
   end
 end
 
@@ -119,10 +127,9 @@ end
 
 if settings.startup["wood-logistics-big-electric-pole"].value then
   data.raw["electric-pole"]["big-electric-pole"].fast_replaceable_group = "big-electric-pole"
-end
-
-if mods["big-wooden-pole"] then
-  data.raw["electric-pole"]["big-wooden-pole"].maximum_wire_distance = 16
+  if mods["big-wooden-pole"] then
+    data.raw["electric-pole"]["big-wooden-pole"].maximum_wire_distance = 16
+  end
 end
 
 if settings.startup["wood-logistics-lumber-mill"].value then

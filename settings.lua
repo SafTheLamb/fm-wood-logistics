@@ -20,7 +20,15 @@ data:extend({
     name = "wood-logistics-belts",
     setting_type = "startup",
     default_value = true,
-    order = "b[logistics]-a[belts]"
+    order = "b[logistics]-a[belts]-a[add]"
+  },
+  -- modify vanilla belt recipes to require wood belts
+  {
+    type = "bool-setting",
+    name = "wood-logistics-belts-modify",
+    setting_type = "startup",
+    default_value = true,
+    order = "b[logistics]-a[belts]-b[modify]"
   },
   -- add wood to inserter recipe
   {
@@ -68,8 +76,16 @@ data:extend({
     type = "bool-setting",
     name = "wood-logistics-big-electric-pole",
     setting_type = "startup",
-    default_value = true,
-    order = "d[poles]-b[big]"
+    default_value = false,
+    order = "d[poles]-b[big]-a[add]"
+  },
+  -- modify vanilla big electric pole recipe to require wood big electric pole
+  {
+    type = "bool-setting",
+    name = "wood-logistics-big-electric-pole-modify",
+    setting_type = "startup",
+    default_value = false,
+    order = "d[poles]-b[big]-b[modify]"
   },
   -- add wood to repair pack recipe
   {
@@ -78,6 +94,6 @@ data:extend({
     setting_type = "startup",
     default_value = 2,
     minimum_value = 0,
-    order = "z[misc]-a[repair-pack]"
-  },
+    order = "m[misc]-a[repair-pack]"
+  }
 })

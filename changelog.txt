@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.1
+  Minor Features:
+    - Add settings to control whether vanilla belts require wood belts (default true)
+  Changes:
+    - Disable big wood electric poles by default (big wooden poles are preferred)
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.0
   Changes:
     - Migrate assets to separate Wood Base Assets mod
