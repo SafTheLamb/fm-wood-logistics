@@ -1,4 +1,4 @@
-local wood_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
+local lumber_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
 
 if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
   AAILoaders.make_tier{
@@ -18,7 +18,7 @@ if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
     },
     recipe = {
       ingredients = {
-        {type="item", name=wood_item, amount=5},
+        {type="item", name=lumber_item, amount=5},
         {type="item", name="copper-cable", amount=10},
         {type="item", name="wood-transport-belt", amount=1}
       },
@@ -26,7 +26,7 @@ if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
     },
     unlubricated_recipe = {
       ingredients = {
-        {type="item", name=wood_item, amount=50},
+        {type="item", name=lumber_item, amount=50},
         {type = "item", name = "copper-cable", amount = 100},
         {type = "item", name = "wood-transport-belt", amount = 1}
       },
@@ -45,7 +45,7 @@ if mods["vanilla-loaders-hd"] then
       mask_tint = util.color("a06e5ad1"),
       base_tint = util.color("7B4936"),
       ingredients = {
-        {type="item", name=wood_item, amount=5},
+        {type="item", name=lumber_item, amount=5},
         {type="item", name="copper-cable", amount=10},
         {type="item", name="wood-transport-belt", amount=1}
       },

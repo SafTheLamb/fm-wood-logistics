@@ -23,8 +23,8 @@ end
 
 -------------------------------------------------------------------------- Recipe changes
 
-local wood_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
-if wood_item == "lumber" then
+local lumber_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
+if lumber_item == "lumber" then
   frep.replace_ingredient("wooden-chest", "wood", "lumber")
   frep.replace_ingredient("small-electric-pole", "wood", "lumber")
   frep.replace_ingredient("combat-shotgun", "wood", "lumber")
@@ -84,24 +84,24 @@ end
 
 local rail_cost = settings.startup["wood-logistics-rail-cost"].value
 if rail_cost > 0 then
-  frep.add_ingredient("rail", {type="item", name=wood_item, amount=rail_cost})
+  frep.add_ingredient("rail", {type="item", name=lumber_item, amount=rail_cost})
 end
 
 if settings.startup["wood-logistics-inserter"].value then
   if mods["aai-industry"] then
-    frep.add_ingredient("inserter", {type="item", name=wood_item, amount=1})
-    frep.replace_ingredient("long-handed-inserter", "iron-stick", wood_item)
+    frep.add_ingredient("inserter", {type="item", name=lumber_item, amount=1})
+    frep.replace_ingredient("long-handed-inserter", "iron-stick", lumber_item)
   else
-    frep.replace_ingredient("inserter", "iron-plate", wood_item)
-    frep.replace_ingredient("long-handed-inserter", "iron-plate", wood_item)
+    frep.replace_ingredient("inserter", "iron-plate", lumber_item)
+    frep.replace_ingredient("long-handed-inserter", "iron-plate", lumber_item)
   end
 end
 
 if settings.startup["wood-logistics-assembling-machine"].value then
   if mods["aai-industry"] then
-    frep.replace_ingredient("assembling-machine-1", "iron-gear-wheel", wood_item)
+    frep.replace_ingredient("assembling-machine-1", "iron-gear-wheel", lumber_item)
   else
-    frep.replace_ingredient("assembling-machine-1", "iron-plate", wood_item)
+    frep.replace_ingredient("assembling-machine-1", "iron-plate", lumber_item)
   end
 end
 
