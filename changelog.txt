@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.2
+  Minor Features:
+    - Add basic compatibility for Amator Phasma's Coal & Steam: wooden belts now all unlock at the same time
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.1
   Minor Features:
     - Add settings to control whether vanilla belts require wood belts (default true)

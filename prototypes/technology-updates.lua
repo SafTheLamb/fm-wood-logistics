@@ -50,3 +50,20 @@ if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
   ftech.add_prereq("aai-loader", "aai-wood-loader")
   ftech.scale_cost("aai-loader", {count=5})
 end
+
+-------------------------------------------------------------------------- Miscellaneous compatibility
+
+if mods["apm_power_ldinc"] then
+  data.raw.technology["wood-logistics"].hidden = true
+  data.raw.technology["wood-logistics"].enabled = false
+  data.raw.technology["wood-logistics"].effects = nil
+  if mods["aai-industry"] then
+    -- ftech.import_unlocks()
+    ftech.add_unlock("basic-wood-logistics", "wood-splitter")
+    ftech.add_unlock("basic-wood-logistics", "wood-underground-belt")
+  else
+    -- ftech.disable_technology()
+    data.raw.recipe["wood-splitter"].enabled = true
+    data.raw.recipe["wood-underground-belt"].enabled = true
+  end
+end
