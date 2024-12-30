@@ -49,9 +49,9 @@ if settings.startup["wood-logistics-lumber-mill"].value then
       type = "technology",
       name = "advanced-carpentry",
       icon = "__wood-base-assets__/graphics/technology/lumber-mill.png",
-      icon_size = 256, icon_mipmaps = 4,
-      effects = {{type="unlock-recipe", recipe="lumber-mill"}},
+      icon_size = 256,
       prerequisites = {"automation-3"},
+      effects = {{type="unlock-recipe", recipe="lumber-mill"}},
       unit = {
         count = 250,
         ingredients = {
@@ -74,7 +74,7 @@ if settings.startup["wood-logistics-big-electric-pole"].value then
       type = "technology",
       name = "wood-electric-energy-distribution",
       icon = "__wood-base-assets__/graphics/technology/wood-electric-energy-distribution.png",
-      icon_size = 256, icon_mipmaps = 4,
+      icon_size = 256,
       effects = {
         {type = "unlock-recipe", recipe="big-wood-electric-pole"},
       },

@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.3
+  Bugfixes:
+    - Fix emissive texture for lumber mill (cursed type)
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.2
   Minor Features:
     - Add basic compatibility for Amator Phasma's Coal & Steam: wooden belts now all unlock at the same time

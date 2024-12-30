@@ -310,7 +310,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
             }),
           }
         },
-        working_visualizations = {
+        working_visualisations = {
           {
             effect = "flicker",
             fadeout = true,
