@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.4
+  Bugfixes:
+    - Fix compatibility for Amator Phasma's Coal & Steam
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.3
   Bugfixes:
     - Fix emissive texture for lumber mill (cursed type)
