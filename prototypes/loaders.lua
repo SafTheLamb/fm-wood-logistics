@@ -11,7 +11,7 @@ if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
     technology = {
       unit = {
         count = mods["aai-industry"] and 50 or 25,
-        ingredients = mods["aai-industry"] and {{"automation-science-pack", 1}, {"logistic-science-pack", 1}} or {{"automation-science-pack", 1}},
+        ingredients = (mods["aai-industry"] and settings.startup["aai-loaders-mode"].value == "lubricated") and {{"automation-science-pack", 1}, {"logistic-science-pack", 1}} or {{"automation-science-pack", 1}},
         time = 15
       },
       prerequisites = {"wood-logistics"}
@@ -19,7 +19,7 @@ if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
     recipe = {
       ingredients = {
         {type="item", name=lumber_item, amount=5},
-        {type="item", name="copper-cable", amount=10},
+        mods["aai-industry"] and {type="item", name="motor", amount=2} or {type="item", name="copper-cable", amount=10},
         {type="item", name="wood-transport-belt", amount=1}
       },
       energy_required = 1
@@ -27,8 +27,8 @@ if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
     unlubricated_recipe = {
       ingredients = {
         {type="item", name=lumber_item, amount=50},
-        {type = "item", name = "copper-cable", amount = 100},
-        {type = "item", name = "wood-transport-belt", amount = 1}
+        mods["aai-industry"] and {type="item", name="motor", amount=20} or {type="item", name="copper-cable", amount=100},
+        {type="item", name="wood-transport-belt", amount=1}
       },
       energy_required = 5
     },

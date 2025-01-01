@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.5
+  Changes:
+    - Add Steam Power to prerequisite for AAI Wooden loader when combined with AAI Industry (in lubricated mode)
+    - Remove logistic science pack from Wooden loader tech cost in non-lubricated mode
+    - Rename Really basic logistics to Wooden logistics when Amator Phasma's Coal & Steam is installed with AAI Industry
+    - Revert some APCS compat changes to respect compatibility changes done by ldinc
+  Bugfixes:
+    - Fix compatibility for APCS + AAI Loaders
+    - Fix error when AAI Loaders is set to Graphics Only mode
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.4
   Bugfixes:
     - Fix compatibility for Amator Phasma's Coal & Steam

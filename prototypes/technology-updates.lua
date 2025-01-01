@@ -46,31 +46,7 @@ if mods["big-wooden-pole"] then
   end
 end
 
-if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
+if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value and settings.startup["aai-loaders-mode"].value ~= "graphics-only" then
   ftech.add_prereq("aai-loader", "aai-wood-loader")
   ftech.scale_cost("aai-loader", {count=5})
-end
-
--------------------------------------------------------------------------- Miscellaneous compatibility
-
-if mods["apm_power_ldinc"] and settings.startup["wood-logistics-belts"].value then
-  data.raw.technology["wood-logistics"].hidden = true
-  data.raw.technology["wood-logistics"].enabled = false
-  ftech.remove_prereq("logistics", "wood-logistics")
-  
-  data.raw.technology["wood-logistics"].effects = nil
-  if mods["aai-industry"] then
-    -- ftech.import_unlocks()
-    ftech.add_unlock("basic-wood-logistics", "wood-splitter")
-    ftech.add_unlock("basic-wood-logistics", "wood-underground-belt")
-    data.raw.technology["basic-wood-logistics"].research_trigger = {
-      type = "craft-item",
-      item = "copper-plate",
-      count = 10,
-    }
-  else
-    -- ftech.disable_technology()
-    data.raw.recipe["wood-splitter"].enabled = true
-    data.raw.recipe["wood-underground-belt"].enabled = true
-  end
 end

@@ -3,12 +3,6 @@ local fentity = require("__fdsl__.lib.entity")
 
 -------------------------------------------------------------------------- Item changes
 
-if settings.startup["wood-logistics-belts"].value then
-  if mods["aai-loaders"] then
-    data.raw.item["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
-  end
-end
-
 if mods["big-wooden-pole"] then
   data.raw.item["big-wooden-pole"].order = "a[energy]-c[big-electric-pole]a"
 end
@@ -62,7 +56,8 @@ if settings.startup["wood-logistics-belts"].value then
 
   frep.replace_ingredient("automation-science-pack", "copper-plate", {type="item", name="wood-transport-belt", amount=2})
 
-  if mods["aai-loaders"] then
+  if mods["aai-loaders"] and settings.startup["aai-loaders-mode"].value ~= "graphics-only" then
+    data.raw.item["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
     data.raw.recipe["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
     if settings.startup["wood-logistics-belts-modify"].value then
       frep.replace_ingredient("aai-loader", "transport-belt", "aai-wood-loader")

@@ -17,6 +17,7 @@ if settings.startup["wood-logistics-belts"].value then
           item = "copper-cable",
           count = 50,
         },
+        order = "A"
       }
     })
   end
