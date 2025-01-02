@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.6
+  Changes:
+    - Fix errors when APCS is installed with AAI Loaders but without AAI Industry
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.5
   Changes:
     - Add Steam Power to prerequisite for AAI Wooden loader when combined with AAI Industry (in lubricated mode)

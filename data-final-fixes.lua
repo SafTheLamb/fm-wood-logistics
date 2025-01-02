@@ -6,7 +6,6 @@ if mods["apm_power_ldinc"] and settings.startup["wood-logistics-belts"].value th
   data.raw.technology["wood-logistics"].hidden = true
   data.raw.technology["wood-logistics"].enabled = false
   ftech.remove_prereq("logistics", "wood-logistics")
-  data.raw.technology["basic-wood-logistics"].localised_name = {"technology-name.wood-logistics"}
   
   if mods["aai-loaders"] and settings.startup["aai-loaders-mode"].value ~= "graphics-only" then
     ftech.add_prereq("aai-wood-loader", "apm_steam_science_pack")
@@ -14,6 +13,7 @@ if mods["apm_power_ldinc"] and settings.startup["wood-logistics-belts"].value th
     ftech.remove_prereq("aai-wood-loader", "wood-logistics")
     ftech.remove_prereq("aai-wood-loader", "automation-science-pack")
     if mods["aai-industry"] then
+      frep.replace_ingredient("aai-wood-loader", "apm_simple_engine", "apm_steam_engine")
       ftech.add_prereq("aai-wood-loader", "basic-wood-logistics")
       ftech.remove_cost_ingredient("aai-wood-loader", "logistic-science-pack")
       ftech.remove_prereq("aai-wood-loader", "steam-power")
@@ -22,7 +22,6 @@ if mods["apm_power_ldinc"] and settings.startup["wood-logistics-belts"].value th
     ftech.remove_cost_ingredient("aai-loader", "logistic-science-pack")
     ftech.remove_prereq("aai-loader", "logistic-science-pack")
     if settings.startup["aai-loaders-mode"].value == "lubricated" then
-      frep.replace_ingredient("aai-wood-loader", "apm_simple_engine", "apm_steam_engine")
       ftech.remove_prereq("aai-loader", "oil-processing")
     end
   end
@@ -30,6 +29,7 @@ if mods["apm_power_ldinc"] and settings.startup["wood-logistics-belts"].value th
   data.raw.technology["wood-logistics"].effects = nil
   if mods["aai-industry"] then
     -- ftech.import_unlocks()
+    data.raw.technology["basic-wood-logistics"].localised_name = {"technology-name.wood-logistics"}
     ftech.add_unlock("basic-wood-logistics", "wood-splitter")
     ftech.add_unlock("basic-wood-logistics", "wood-underground-belt")
   else
