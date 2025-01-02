@@ -12,8 +12,8 @@ if mods["apm_power_ldinc"] and settings.startup["wood-logistics-belts"].value th
     ftech.remove_cost_ingredient("aai-wood-loader", "automation-science-pack")
     ftech.remove_prereq("aai-wood-loader", "wood-logistics")
     ftech.remove_prereq("aai-wood-loader", "automation-science-pack")
+    frep.replace_ingredient("aai-wood-loader", "apm_mechanical_relay", "apm_steam_relay")
     if mods["aai-industry"] then
-      frep.replace_ingredient("aai-wood-loader", "apm_simple_engine", "apm_steam_engine")
       ftech.add_prereq("aai-wood-loader", "basic-wood-logistics")
       ftech.remove_cost_ingredient("aai-wood-loader", "logistic-science-pack")
       ftech.remove_prereq("aai-wood-loader", "steam-power")

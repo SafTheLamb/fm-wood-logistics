@@ -170,7 +170,7 @@ end
 if mods["space-age"] then
   for entity_type,entity_list in pairs(wood_entities) do
     for _,entity_name in pairs(entity_list) do
-      fentity.set_surface_condition(entity_type, entity_name, {property="gravity", min=1})
+      fentity.set_surface_condition(entity_type, entity_name, {property="gravity", min=0.1})
       fentity.set_surface_condition(entity_type, entity_name, {property="pressure", max=2000})
     end
   end
