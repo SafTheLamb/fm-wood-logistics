@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.8
+  Changes:
+    - After talking with ldinc, compatibility for Amator Phasma's Coal & Steam is now managed over there!
+
+---------------------------------------------------------------------------------------------------
+Version: 2.3.7
+  Changes:
+    - More APCS compat
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.6
   Changes:
     - Fix errors when APCS is installed with AAI Loaders but without AAI Industry
