@@ -30,6 +30,14 @@ data:extend({
     default_value = true,
     order = "b[logistics]-a[belts]-b[modify]"
   },
+  -- whether you can connect circuits to wooden belts (default off... they're made of wood!)
+  {
+    type = "bool-setting",
+    name = "wood-logistics-belts-circuits",
+    setting_type = "startup",
+    default_value = false,
+    order = "b[logistics]-a[belts]-c[circuits]"
+  },
   -- add wood to inserter recipe
   {
     type = "bool-setting",
@@ -95,5 +103,13 @@ data:extend({
     default_value = 2,
     minimum_value = 0,
     order = "m[misc]-a[repair-pack]"
+  },
+  -- add wooden belts to automation science pack recipe
+  {
+    type = "bool-setting",
+    name = "wood-logistics-red-science",
+    setting_type = "startup",
+    default_value = false,
+    order = "m[misc]-b[red-science]"
   }
 })

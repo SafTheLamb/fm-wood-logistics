@@ -1,3 +1,4 @@
+local meld = require("meld")
 local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 local wood_logistics_sounds = require("prototypes.entity.sounds")
@@ -17,6 +18,8 @@ if settings.startup["wood-logistics-belts"].value then
       direction_count = 20
     }
   }
+
+  meld(wood_belt_animation_set, belt_reader_gfx)
 
   data:extend({
     {
@@ -48,9 +51,8 @@ if settings.startup["wood-logistics-belts"].value then
       next_upgrade = "transport-belt",
       speed = 0.015625,
       connector_frame_sprites = transport_belt_connector_frame_sprites,
-      circuit_wire_connection_points = circuit_connector_definitions["belt"].points,
-      circuit_connector_sprites = circuit_connector_definitions["belt"].sprites,
-      circuit_wire_max_distance = transport_belt_circuit_wire_max_distance
+      circuit_connector = circuit_connector_definitions["belt"],
+      circuit_wire_max_distance = settings.startup["wood-logistics-belts-circuits"].value and transport_belt_circuit_wire_max_distance or 0,
     },
     {
       type = "underground-belt",

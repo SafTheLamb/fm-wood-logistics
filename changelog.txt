@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.9
+  Changes:
+    - Fulgoran ruins now yield wood/lumber, to prevent softlocks on fresh starts
+    - Add setting for making automation science packs cost wood
+    - Add setting for making wooden belts unable to connect to circuit networks... they're made of wood!
+  Bugfixes:
+    - Fix circuit connection points for wooden belts... by removing circuits for wooden belts! :)
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.8
   Changes:
     - After talking with ldinc, compatibility for Amator Phasma's Coal & Steam is now managed over there!

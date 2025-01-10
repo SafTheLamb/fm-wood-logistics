@@ -54,8 +54,6 @@ if settings.startup["wood-logistics-belts"].value then
     frep.replace_ingredient("lab", "transport-belt", "inserter")
   end
 
-  frep.replace_ingredient("automation-science-pack", "copper-plate", {type="item", name="wood-transport-belt", amount=2})
-
   if mods["aai-loaders"] and settings.startup["aai-loaders-mode"].value ~= "graphics-only" then
     data.raw.item["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
     data.raw.recipe["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
@@ -112,6 +110,14 @@ end
 local repair_pack_cost = settings.startup["wood-logistics-repair-pack-cost"].value
 if repair_pack_cost > 0 then
   frep.add_ingredient("repair-pack", {type="item", name="wood", amount=repair_pack_cost})
+end
+
+if settings.startup["wood-logistics-red-science"].value then
+  if settings.startup["wood-logistics-belts"].value then
+    frep.replace_ingredient("automation-science-pack", "copper-plate", {type="item", name="wood-transport-belt", amount=2})
+  else
+    frep.add_ingredient("automation-science-pack", {type="item", name=lumber_item, amount=1})
+  end
 end
 
 -------------------------------------------------------------------------- Entity changes
@@ -174,4 +180,8 @@ if mods["space-age"] then
       fentity.set_surface_condition(entity_type, entity_name, {property="pressure", max=2000})
     end
   end
+
+  table.insert(data.raw["lightning-attractor"]["fulgoran-ruin-attractor"].minable.results, {type="item", name=lumber_item, amount=10})
+  table.insert(data.raw["simple-entity"]["fulgoran-ruin-small"].minable.results, {type="item", name=lumber_item, amount=5})
+  table.insert(data.raw["simple-entity"]["fulgoran-ruin-medium"].minable.results, {type="item", name=lumber_item, amount=3})
 end
