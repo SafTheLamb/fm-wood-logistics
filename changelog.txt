@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.10
+  Bugfixes:
+    - Hide effects and remnants in factoriopedia
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.9
   Changes:
     - Fulgoran ruins now yield wood/lumber, to prevent softlocks on fresh starts
