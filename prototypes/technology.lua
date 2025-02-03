@@ -14,8 +14,8 @@ if settings.startup["wood-logistics-belts"].value then
         },
         research_trigger = {
           type = "craft-item",
-          item = "copper-cable",
-          count = 50,
+          item = settings.startup["wood-logistics-lumber"].value and "lumber" or "copper-plate",
+          count = 10,
         },
         order = "A"
       }

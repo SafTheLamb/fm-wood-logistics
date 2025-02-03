@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.12
+  Changes:
+    - Really basic logistics is now researched with crafting 10 lumber instead of 50 copper cables
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.11
   Changes:
     - Undo base tint of vanilla loaders
