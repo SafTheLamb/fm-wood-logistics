@@ -43,7 +43,6 @@ if mods["vanilla-loaders-hd"] then
     vanilla_loaders_api.create_loader("wood-loader", "wood-transport-belt", {
       technology = "wood-logistics",
       mask_tint = util.color("a06e5ad1"),
-      base_tint = util.color("7B4936"),
       ingredients = {
         {type="item", name=lumber_item, amount=5},
         {type="item", name="copper-cable", amount=10},
