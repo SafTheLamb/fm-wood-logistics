@@ -9,6 +9,7 @@ if settings.startup["wood-logistics-lumber"].value then
       type = "item",
       name = "lumber",
       icon = "__wood-base-assets__/graphics/icons/lumber.png",
+      icon_size = 64,
       pictures = {
         {size = 64, filename = "__wood-base-assets__/graphics/icons/lumber.png",   scale = 0.5, mipmap_count = 4},
         {size = 64, filename = "__wood-base-assets__/graphics/icons/lumber-1.png", scale = 0.5, mipmap_count = 4},

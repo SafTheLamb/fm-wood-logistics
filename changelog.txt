@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.4.1
+  Compatibility:
+    - Add support for Deadlock Beltboxes and Loaders
+
+---------------------------------------------------------------------------------------------------
+Version: 2.4.0
+  Changes:
+    - AAI Industry: Lumber cost moved from inserter to burner inserter
+    - AAI Industry: Lumber moved from assembling machine 1 to burner assembler
+    - Doubled time required to craft lumber
+    - Removed surface condition from lumber mill
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.12
   Changes:
     - Really basic logistics is now researched with crafting 10 lumber instead of 50 copper cables

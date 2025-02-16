@@ -82,8 +82,8 @@ end
 
 if settings.startup["wood-logistics-inserter"].value then
   if mods["aai-industry"] then
-    frep.add_ingredient("inserter", {type="item", name=lumber_item, amount=1})
-    frep.replace_ingredient("long-handed-inserter", "iron-stick", lumber_item)
+    frep.replace_ingredient("burner-inserter", "iron-stick", {type="item", name=lumber_item, amount=1})
+    frep.add_ingredient("inserter", {type="item", name="iron-stick", amount=2})
   else
     frep.replace_ingredient("inserter", "iron-plate", lumber_item)
     frep.replace_ingredient("long-handed-inserter", "iron-plate", lumber_item)
@@ -92,7 +92,7 @@ end
 
 if settings.startup["wood-logistics-assembling-machine"].value then
   if mods["aai-industry"] then
-    frep.replace_ingredient("assembling-machine-1", "iron-gear-wheel", lumber_item)
+    frep.replace_ingredient("burner-assembling-machine", "iron-plate", {type="item", name=lumber_item, amount=4})
   else
     frep.replace_ingredient("assembling-machine-1", "iron-plate", lumber_item)
   end
@@ -154,7 +154,6 @@ end
 -- Update all wooden entities to be weak to fire and unable to be placed in space or on vulcanus
 
 local wood_entities = {
-  ["assembling-machine"] = {"lumber-mill"},
   ["container"] = {"wooden-chest"},
   ["electric-pole"] = {"small-electric-pole", "big-wooden-pole", "big-wood-electric-pole"},
   ["transport-belt"] = {"wood-transport-belt"},

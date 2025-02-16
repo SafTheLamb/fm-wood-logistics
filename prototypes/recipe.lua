@@ -10,6 +10,7 @@ if settings.startup["wood-logistics-lumber"].value then
       name = "lumber",
       category = recipe_category,
       allow_productivity = true,
+      energy_required = 1,
       ingredients = {
         mods["expensive-mode"] and {type="item", name="wood", amount=4} or {type="item", name="wood", amount=2}
       },
