@@ -29,6 +29,9 @@ if lumber_item == "lumber" then
   if mods["Wood-Walls"] then
     frep.replace_ingredient("wooden-wall", "wood", "lumber")
   end
+  if mods["sign-post"] then
+    frep.add_ingredient("sign-post", {type="item", name="lumber", amount=1})
+  end
 end
 
 if settings.startup["wood-logistics-lumber-mill"].value then
