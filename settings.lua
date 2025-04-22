@@ -14,6 +14,13 @@ data:extend({
     default_value = true,
     order = "a[lumber]-b[mill]"
   },
+  {
+    type = "bool-setting",
+    name = "wood-logistics-woodtronics",
+    setting_type = "startup",
+    default_value = true,
+    order = "a[lumber]-c[woodtronics]"
+  },
   -- add wood-tier belts, or simply add wood to belt recipes
   {
     type = "bool-setting",
@@ -46,24 +53,21 @@ data:extend({
     default_value = true,
     order = "b[logistics]-b[inserters]"
   },
-  -- add wooden cargo wagon
-  {
-    type = "bool-setting",
-    name = "wood-logistics-cargo-wagon",
-    setting_type = "startup",
-    default_value = true,
-    order = "b[logistics]-c[trains]-a[wagon]"
-  },
-  -- add wood to rails recipe
   {
     type = "int-setting",
     name = "wood-logistics-rail-cost",
     setting_type = "startup",
     default_value = 1,
     minimum_value = 0,
-    order = "b[logistics]-c[trains]-b[rails]"
+    order = "b[logistics]-c[trains]-a[rails]"
   },
-  -- add wood to assembling machine 1
+  {
+    type = "bool-setting",
+    name = "wood-logistics-cargo-wagon",
+    setting_type = "startup",
+    default_value = true,
+    order = "b[logistics]-c[trains]-b[wagon]"
+  },
   {
     type = "bool-setting",
     name = "wood-logistics-assembling-machine",
@@ -79,37 +83,13 @@ data:extend({
     default_value = true,
     order = "d[poles]-a[small]"
   },
-  -- add big wooden electric poles
-  {
-    type = "bool-setting",
-    name = "wood-logistics-big-electric-pole",
-    setting_type = "startup",
-    default_value = false,
-    order = "d[poles]-b[big]-a[add]"
-  },
-  -- modify vanilla big electric pole recipe to require wood big electric pole
-  {
-    type = "bool-setting",
-    name = "wood-logistics-big-electric-pole-modify",
-    setting_type = "startup",
-    default_value = false,
-    order = "d[poles]-b[big]-b[modify]"
-  },
   -- add wood to repair pack recipe
   {
     type = "int-setting",
     name = "wood-logistics-repair-pack-cost",
     setting_type = "startup",
-    default_value = 2,
+    default_value = 1,
     minimum_value = 0,
     order = "m[misc]-a[repair-pack]"
-  },
-  -- add wooden belts to automation science pack recipe
-  {
-    type = "bool-setting",
-    name = "wood-logistics-red-science",
-    setting_type = "startup",
-    default_value = false,
-    order = "m[misc]-b[red-science]"
   }
 })

@@ -19,6 +19,29 @@ if settings.startup["wood-logistics-lumber"].value then
   })
 end
 
+if settings.startup["wood-logistics-woodtronics"].value then
+  data:extend({
+    {
+      type = "recipe",
+      name = "electronic-circuit-from-wood",
+      icons = {
+        {icon="__base__/graphics/icons/electronic-circuit.png"},
+        {icon=data.raw.item[lumber_item].icon, shift={-12, -12}, scale=0.4, draw_background=true}
+      },
+      category = data.raw.recipe["electronic-circuit"].category,
+      order = "b[circuits]-a[electronic-circuit]b",
+      enabled = false,
+      allow_productivity = true,
+      energy_required = 1,
+      ingredients = {
+        {type="item", name=lumber_item, amount=1},
+        {type="item", name="copper-cable", amount=5}
+      },
+      results = {{type="item", name="electronic-circuit", amount=2}}
+    }
+  })
+end
+
 -------------------------------------------------------------------------- Transport belts
 
 if settings.startup["wood-logistics-belts"].value then
@@ -99,25 +122,6 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
         {type="item", name=lumber_item, amount=20}
       },
       results = {{type="item", name="wood-cargo-wagon", amount=1}}
-    }
-  })
-end
-
--------------------------------------------------------------------------- Electric poles
-
-if settings.startup["wood-logistics-big-electric-pole"].value then
-  data:extend({
-    {
-      type = "recipe",
-      name = "big-wood-electric-pole",
-      category = recipe_category,
-      enabled = false,
-      ingredients = {
-        {type="item", name="small-electric-pole", amount=2},
-        {type="item", name="steel-plate", amount=1},
-        {type="item", name=lumber_item, amount=2},
-      },
-      results = {{type="item", name="big-wood-electric-pole", amount=2}}
     }
   })
 end

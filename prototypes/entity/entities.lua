@@ -9,7 +9,7 @@ local wood_logistics_simulations = require("prototypes.factoriopedia-simulations
 if settings.startup["wood-logistics-belts"].value then
   wood_belt_animation_set = {
     animation_set = {
-      filename = "__wood-base-assets__/graphics/entity/wood-transport-belt/wood-transport-belt.png",
+      filename = "__wood-logistics__/graphics/entity/wood-transport-belt/wood-transport-belt.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -25,7 +25,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "transport-belt",
       name = "wood-transport-belt",
-      icon = "__wood-base-assets__/graphics/icons/wood-transport-belt.png",
+      icon = "__wood-logistics__/graphics/icons/wood-transport-belt.png",
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 0.1, result = "wood-transport-belt"},
       max_health = 100,
@@ -57,7 +57,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "underground-belt",
       name = "wood-underground-belt",
-      icon = "__wood-base-assets__/graphics/icons/wood-underground-belt.png",
+      icon = "__wood-logistics__/graphics/icons/wood-underground-belt.png",
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 0.1, result = "wood-underground-belt"},
       max_health = 100,
@@ -104,7 +104,7 @@ if settings.startup["wood-logistics-belts"].value then
       structure = {
         direction_in = {
           sheet = {
-            filename = "__wood-base-assets__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
             priority = "extra-high",
             width = 192,
             height = 192,
@@ -114,7 +114,7 @@ if settings.startup["wood-logistics-belts"].value then
         },
         direction_out = {
           sheet = {
-            filename = "__wood-base-assets__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
             priority = "extra-high",
             width = 192,
             height = 192,
@@ -123,7 +123,7 @@ if settings.startup["wood-logistics-belts"].value then
         },
         direction_in_side_loading = {
           sheet = {
-            filename = "__wood-base-assets__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
             priority = "extra-high",
             width = 192,
             height = 192,
@@ -133,7 +133,7 @@ if settings.startup["wood-logistics-belts"].value then
         },
         direction_out_side_loading = {
           sheet = {
-            filename = "__wood-base-assets__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
+            filename = "__wood-logistics__/graphics/entity/wood-underground-belt/wood-underground-belt-structure.png",
             priority = "extra-high",
             width = 192,
             height = 192,
@@ -164,7 +164,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "splitter",
       name = "wood-splitter",
-      icon = "__wood-base-assets__/graphics/icons/wood-splitter.png",
+      icon = "__wood-logistics__/graphics/icons/wood-splitter.png",
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 0.1, result = "wood-splitter"},
       max_health = 120,
@@ -186,7 +186,7 @@ if settings.startup["wood-logistics-belts"].value then
       working_sound = sounds.splitter,
       structure = {
         north = {
-          filename = "__wood-base-assets__/graphics/entity/wood-splitter/wood-splitter-north.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-north.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -196,7 +196,7 @@ if settings.startup["wood-logistics-belts"].value then
           scale = 0.5
         },
         east = {
-          filename = "__wood-base-assets__/graphics/entity/wood-splitter/wood-splitter-east.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-east.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -206,7 +206,7 @@ if settings.startup["wood-logistics-belts"].value then
           scale = 0.5
         },
         south = {
-          filename = "__wood-base-assets__/graphics/entity/wood-splitter/wood-splitter-south.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-south.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -216,7 +216,7 @@ if settings.startup["wood-logistics-belts"].value then
           scale = 0.5
         },
         west = {
-          filename = "__wood-base-assets__/graphics/entity/wood-splitter/wood-splitter-west.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-west.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -229,7 +229,7 @@ if settings.startup["wood-logistics-belts"].value then
       structure_patch = {
         north = util.empty_sprite(),
         east = {
-          filename = "__wood-base-assets__/graphics/entity/wood-splitter/wood-splitter-east-top_patch.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-east-top_patch.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -240,7 +240,7 @@ if settings.startup["wood-logistics-belts"].value then
         },
         south = util.empty_sprite(),
         west = {
-          filename = "__wood-base-assets__/graphics/entity/wood-splitter/wood-splitter-west-top_patch.png",
+          filename = "__wood-logistics__/graphics/entity/wood-splitter/wood-splitter-west-top_patch.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -261,7 +261,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
     {
       type = "assembling-machine",
       name = "lumber-mill",
-      icon = "__wood-base-assets__/graphics/icons/lumber-mill.png",
+      icon = "__wood-logistics__/graphics/icons/lumber-mill.png",
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
       minable = {mining_time=0.2, result="lumber-mill"},
       fast_replaceable_group = "lumber-mill",
@@ -298,14 +298,15 @@ if settings.startup["wood-logistics-lumber-mill"].value then
       impact_category = "wood",
       perceived_performance = {minimum=0.25, performance_to_activity_rate=0.25, maximum=8},
       graphics_set = {
+        reset_animation_when_frozen = true,
         animation = {
           layers = {
-            util.sprite_load("__wood-base-assets__/graphics/entity/lumber-mill/lumber-mill-animation", {
+            util.sprite_load("__wood-logistics__/graphics/entity/lumber-mill/lumber-mill-animation", {
               frame_count = 80,
               animation_speed = 0.32,
               scale = 0.5
             }),
-            util.sprite_load("__wood-base-assets__/graphics/entity/lumber-mill/lumber-mill-shadow", {
+            util.sprite_load("__wood-logistics__/graphics/entity/lumber-mill/lumber-mill-shadow", {
               draw_as_shadow = true,
               repeat_count = 80,
               scale = 0.5
@@ -316,7 +317,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
           {
             effect = "flicker",
             fadeout = true,
-            animation = util.sprite_load("__wood-base-assets__/graphics/entity/lumber-mill/lumber-mill-emission", {
+            animation = util.sprite_load("__wood-logistics__/graphics/entity/lumber-mill/lumber-mill-emission", {
               draw_as_glow = true,
               blend_mode = "additive",
               frame_count = 80,
@@ -324,7 +325,15 @@ if settings.startup["wood-logistics-lumber-mill"].value then
               scale = 0.5
             })
           }
-        }
+        },
+        frozen_patch = {
+          filename = "__wood-logistics__/graphics/entity/lumber-mill/lumber-mill-frozen-patch.png",
+          width = 393,
+          height = 417,
+          shift = util.by_pixel(0.0, -2.0),
+          scale = 0.5,
+          direction_count = 1
+        },
       },
       working_sound = {
         sound = {
@@ -347,7 +356,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
     {
       type = "cargo-wagon",
       name = "wood-cargo-wagon",
-      icon = "__wood-base-assets__/graphics/icons/wood-cargo-wagon.png",
+      icon = "__wood-logistics__/graphics/icons/wood-cargo-wagon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
       inventory_size = 20,
       minable = {mining_time = 0.5, result = "wood-cargo-wagon"},
@@ -376,7 +385,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
       pictures = {
         rotated = {
           layers = {
-            util.sprite_load("__wood-base-assets__/graphics/entity/wood-cargo-wagon/wood-cargo-wagon", {
+            util.sprite_load("__wood-logistics__/graphics/entity/wood-cargo-wagon/wood-cargo-wagon", {
                 dice = 4,
                 priority = "very-low",
                 allow_low_quality_rotation = true,
@@ -415,7 +424,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
       },
       horizontal_doors = {
         layers = {
-          util.sprite_load("__wood-base-assets__/graphics/entity/wood-cargo-wagon/wood-cargo-wagon-door-horizontal", {
+          util.sprite_load("__wood-logistics__/graphics/entity/wood-cargo-wagon/wood-cargo-wagon-door-horizontal", {
               frame_count = 8,
               scale = 0.5,
               usage = "train"
@@ -434,7 +443,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
       },
       vertical_doors = {
         layers = {
-          util.sprite_load("__wood-base-assets__/graphics/entity/wood-cargo-wagon/wood-cargo-wagon-door-vertical", {
+          util.sprite_load("__wood-logistics__/graphics/entity/wood-cargo-wagon/wood-cargo-wagon-door-vertical", {
               frame_count = 8,
               scale = 0.5,
               usage = "train"
@@ -481,7 +490,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
           aggregation = {max_count = 1, remove = true, count_already_playing = true}
         },
         stopped_sound = {
-          filename = "__wood-base-assets__/sound/wood-cargo-wagon/wood-cargo-wagon-opened.ogg",
+          filename = "__wood-logistics__/sound/wood-cargo-wagon/wood-cargo-wagon-opened.ogg",
           volume = 0.3,
           aggregation = {max_count = 1, remove = true, count_already_playing = true}
         }
@@ -493,81 +502,10 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
           aggregation = {max_count = 1, remove = true, count_already_playing = true}
         },
         stopped_sound = {
-          filename = "__wood-base-assets__/sound/wood-cargo-wagon/wood-cargo-wagon-closed.ogg",
+          filename = "__wood-logistics__/sound/wood-cargo-wagon/wood-cargo-wagon-closed.ogg",
           volume = 0.3,
           aggregation = {max_count = 1, remove = true, count_already_playing = true}
         }
-      }
-    }
-  })
-end
-
--------------------------------------------------------------------------- Electric poles
-
-if settings.startup["wood-logistics-big-electric-pole"].value then
-  data:extend({
-    {
-      type = "electric-pole",
-      name = "big-wood-electric-pole",
-      icon = "__wood-base-assets__/graphics/icons/big-wood-electric-pole.png",
-      flags = {"placeable-neutral", "player-creation"},
-      minable = {mining_time = 0.1, result = "big-wood-electric-pole"},
-      max_health = 150,
-      corpse = "big-wood-electric-pole-remnants",
-      dying_explosion = "big-wood-electric-pole-explosion",
-      resistances = {{type="fire", percent=-90}},
-      collision_box = {{-0.65, -0.65}, {0.65, 0.65}},
-      selection_box = {{-1, -1}, {1, 1}},
-      damaged_trigger_effect = hit_effects.entity({{-0.5, -2.5},{0.5, 0.5}}),
-      drawing_box = {{-1, -3}, {1, 0.5}},
-      maximum_wire_distance = 24,
-      supply_area_distance = 2,
-      impact_category = "wood",
-      open_sound = sounds.electric_network_open,
-      close_sound = sounds.electric_network_close,
-      fast_replaceable_group = "big-electric-pole",
-      pictures = {
-        layers = {
-          {
-            filename = "__wood-base-assets__/graphics/entity/big-wood-electric-pole/big-wood-electric-pole.png",
-            priority = "extra-high",
-            width = 148,
-            height = 312,
-            direction_count = 4,
-            shift = util.by_pixel(0, -51),
-            scale = 0.5
-          },
-          {
-            filename = "__base__/graphics/entity/big-electric-pole/big-electric-pole-shadow.png",
-            priority = "extra-high",
-            width = 374,
-            height = 94,
-            direction_count = 4,
-            shift = util.by_pixel(60, 0),
-            draw_as_shadow = true,
-            scale = 0.5
-          }
-        }
-      },
-      connection_points = data.raw["electric-pole"]["big-electric-pole"].connection_points,
-      radius_visualisation_picture = {
-        filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",
-        width = 12,
-        height = 12,
-        priority = "extra-high-no-scale"
-      },
-      water_reflection = {
-        pictures = {
-          filename = "__base__/graphics/entity/big-electric-pole/big-electric-pole-reflection.png",
-          priority = "extra-high",
-          width = 16,
-          height = 32,
-          shift = util.by_pixel(0, 60),
-          variation_count = 1,
-          scale = 5
-        },
-        rotate = false,
-        orientation_to_variation = false
       }
     }
   })

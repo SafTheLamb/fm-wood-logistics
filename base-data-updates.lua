@@ -1,54 +1,41 @@
 local frep = require("__fdsl__.lib.recipe")
 local fentity = require("__fdsl__.lib.entity")
 
--------------------------------------------------------------------------- Item changes
+local lumber_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
 
-if mods["big-wooden-pole"] then
-  data.raw.item["big-wooden-pole"].order = "a[energy]-c[big-electric-pole]a"
-end
+-------------------------------------------------------------------------- Item changes
 
 if settings.startup["wood-logistics-cargo-wagon"].value then
   data.raw["item-with-entity-data"]["cargo-wagon"].order = "c[rolling-stock]-b[cargo-wagon]b"
 end
 
-if settings.startup["wood-logistics-big-electric-pole"].value then
-  data.raw.item["big-electric-pole"].order = "a[energy]-c[big-electric-pole]c"
-end
+-------------------------------------------------------------------------- Lumber
 
--------------------------------------------------------------------------- Recipe changes
-
-local lumber_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
 if lumber_item == "lumber" then
   frep.replace_ingredient("wooden-chest", "wood", "lumber")
   frep.replace_ingredient("small-electric-pole", "wood", "lumber")
   frep.replace_ingredient("combat-shotgun", "wood", "lumber")
 
-  if mods["big-wooden-pole"] then
-    frep.replace_ingredient("big-wooden-pole", "wood", "lumber")
-  end
-  if mods["Wood-Walls"] then
-    frep.replace_ingredient("wooden-wall", "wood", "lumber")
-  end
   if mods["sign-post"] then
     frep.add_ingredient("sign-post", {type="item", name="lumber", amount=1})
   end
 end
 
+-------------------------------------------------------------------------- Carpentry
+
 if settings.startup["wood-logistics-lumber-mill"].value then
   data.raw.recipe["wooden-chest"].category = "crafting-or-carpentry"
   data.raw.recipe["small-electric-pole"].category = "crafting-or-carpentry"
-  if mods["big-wooden-pole"] then
-    data.raw.recipe["big-wooden-pole"].category = "crafting-or-carpentry"
-  end
 end
 
 if settings.startup["wood-logistics-belts"].value then
   if settings.startup["wood-logistics-belts-modify"].value then
     if mods["aai-industry"] then
-      frep.add_ingredient("transport-belt", {type="item", name="wood-transport-belt", amount=2})
+      frep.add_ingredient("transport-belt", {type="item", name="wood-transport-belt", amount=1})
     else
-      frep.replace_ingredient("transport-belt", "iron-plate", {type="item", name="wood-transport-belt", amount=2})
+      frep.replace_ingredient("transport-belt", "iron-plate", {type="item", name="wood-transport-belt", amount=1})
     end
+    frep.modify_result("transport-belt", "transport-belt", {amount=1})
     frep.replace_ingredient("underground-belt", "transport-belt", {type="item", name="wood-underground-belt", amount=2})
     frep.replace_ingredient("splitter", "transport-belt", {type="item", name="wood-splitter", amount=1})
   end
@@ -101,39 +88,15 @@ if settings.startup["wood-logistics-assembling-machine"].value then
   end
 end
 
-if settings.startup["wood-logistics-big-electric-pole"].value then
-  if settings.startup["wood-logistics-big-electric-pole-modify"].value then
-    frep.add_ingredient("big-electric-pole", {type="item", name="big-wood-electric-pole", amount=1})
-    if mods["big-wooden-pole"] then
-      frep.replace_ingredient("big-wood-electric-pole", "small-electric-pole", "big-wooden-pole")
-    end
-  end
-end
-
 local repair_pack_cost = settings.startup["wood-logistics-repair-pack-cost"].value
 if repair_pack_cost > 0 then
-  frep.add_ingredient("repair-pack", {type="item", name="wood", amount=repair_pack_cost})
-end
-
-if settings.startup["wood-logistics-red-science"].value then
-  if settings.startup["wood-logistics-belts"].value then
-    frep.replace_ingredient("automation-science-pack", "copper-plate", {type="item", name="wood-transport-belt", amount=2})
-  else
-    frep.add_ingredient("automation-science-pack", {type="item", name=lumber_item, amount=1})
-  end
+  frep.add_ingredient("repair-pack", {type="item", name=lumber_item, amount=repair_pack_cost})
 end
 
 -------------------------------------------------------------------------- Entity changes
 
 if settings.startup["wood-logistics-nerf-small-electric-pole"].value then
   data.raw["electric-pole"]["small-electric-pole"].maximum_wire_distance = data.raw["electric-pole"]["small-electric-pole"].maximum_wire_distance - 1
-end
-
-if settings.startup["wood-logistics-big-electric-pole"].value then
-  data.raw["electric-pole"]["big-electric-pole"].fast_replaceable_group = "big-electric-pole"
-  if mods["big-wooden-pole"] then
-    data.raw["electric-pole"]["big-wooden-pole"].maximum_wire_distance = 16
-  end
 end
 
 if settings.startup["wood-logistics-lumber-mill"].value then
@@ -158,7 +121,7 @@ end
 
 local wood_entities = {
   ["container"] = {"wooden-chest"},
-  ["electric-pole"] = {"small-electric-pole", "big-wooden-pole", "big-wood-electric-pole"},
+  ["electric-pole"] = {"small-electric-pole", "big-wooden-pole"},
   ["transport-belt"] = {"wood-transport-belt"},
   ["underground-belt"] = {"wood-underground-belt"},
   ["splitter"] = {"wood-splitter"},

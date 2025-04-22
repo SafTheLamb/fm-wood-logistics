@@ -6,8 +6,8 @@ if settings.startup["wood-logistics-belts"].value then
       {
         type = "technology",
         name = "basic-wood-logistics",
-        icon = "__wood-base-assets__/graphics/technology/wood-logistics.png",
-        icon_size = 256, icon_mipmaps = 4,
+        icon = "__wood-logistics__/graphics/technology/wood-logistics.png",
+        icon_size = 256,
         effects = {
           {type="unlock-recipe", recipe="wood-transport-belt"},
           {type="unlock-recipe", recipe="copper-cable"},
@@ -25,8 +25,8 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "technology",
       name = "wood-logistics",
-      icon = "__wood-base-assets__/graphics/technology/wood-logistics.png",
-      icon_size = 256, icon_mipmaps = 4,
+      icon = "__wood-logistics__/graphics/technology/wood-logistics.png",
+      icon_size = 256,
       effects = {
         {type="unlock-recipe", recipe="wood-underground-belt"},
         {type="unlock-recipe", recipe="wood-splitter"}
@@ -49,7 +49,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
     {
       type = "technology",
       name = "advanced-carpentry",
-      icon = "__wood-base-assets__/graphics/technology/lumber-mill.png",
+      icon = "__wood-logistics__/graphics/technology/lumber-mill.png",
       icon_size = 256,
       prerequisites = {"automation-3"},
       effects = {{type="unlock-recipe", recipe="lumber-mill"}},
@@ -64,28 +64,5 @@ if settings.startup["wood-logistics-lumber-mill"].value then
         time = 60
       }
     },
-  })
-end
-
--------------------------------------------------------------------------- Electric poles
-
-if settings.startup["wood-logistics-big-electric-pole"].value then
-  data:extend({
-    {
-      type = "technology",
-      name = "wood-electric-energy-distribution",
-      icon = "__wood-base-assets__/graphics/technology/wood-electric-energy-distribution.png",
-      icon_size = 256,
-      effects = {
-        {type = "unlock-recipe", recipe="big-wood-electric-pole"},
-      },
-      prerequisites = {"steel-processing"},
-      unit = {
-        count = 50,
-        ingredients = {{"automation-science-pack", 1}},
-        time = 10
-      },
-      order = "a"
-    }
   })
 end

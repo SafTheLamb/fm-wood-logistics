@@ -1,7 +1,6 @@
 local function item_sound(filename, volume)
-  return
-  {
-    filename = "__wood-base-assets__/sound/item/"..filename,
+  return {
+    filename = "__wood-logistics__/sound/item/"..filename,
     volume = volume,
     aggregation = {max_count = 1, remove = true},
   }

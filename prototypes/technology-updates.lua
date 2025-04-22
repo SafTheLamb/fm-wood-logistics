@@ -1,6 +1,6 @@
 local ftech = require("__fdsl__.lib.technology")
 
--------------------------------------------------------------------------- Technology changes
+-------------------------------------------------------------------------- Transport belts
 
 if settings.startup["wood-logistics-belts"].value then
   ftech.add_prereq("logistics", "wood-logistics")
@@ -15,6 +15,8 @@ if settings.startup["wood-logistics-belts"].value then
   end
 end
 
+-------------------------------------------------------------------------- Lumber mill
+
 if settings.startup["wood-logistics-lumber-mill"].value then
   if mods["space-age"] then
     ftech.add_prereq("advanced-carpentry", "carbon-fiber")
@@ -22,6 +24,8 @@ if settings.startup["wood-logistics-lumber-mill"].value then
     ftech.add_cost_ingredient("advanced-carpentry", "agricultural-science-pack")
   end
 end
+
+-------------------------------------------------------------------------- Cargo wagon
 
 if settings.startup["wood-logistics-cargo-wagon"].value then
   ftech.add_unlock("railway", "wood-cargo-wagon")
@@ -31,12 +35,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
   end
 end
 
-if settings.startup["wood-logistics-big-electric-pole"].value then
-  if mods["aai-industry"] then
-    ftech.add_prereq("wood-electric-energy-distribution", "electricity")
-  end
-  ftech.add_prereq("electric-energy-distribution-1", "wood-electric-energy-distribution")
-end
+-------------------------------------------------------------------------- Big wooden pole
 
 if mods["big-wooden-pole"] then
   if mods["aai-industry"] then
@@ -49,4 +48,8 @@ end
 if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value and settings.startup["aai-loaders-mode"].value ~= "graphics-only" then
   ftech.add_prereq("aai-loader", "aai-wood-loader")
   ftech.scale_cost("aai-loader", {count=5})
+end
+
+if settings.startup["wood-logistics-woodtronics"].value then
+  ftech.add_unlock("electronics", "electronic-circuit-from-wood")
 end

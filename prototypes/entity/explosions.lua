@@ -8,7 +8,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "explosion",
       name = "wood-transport-belt-explosion",
-      icon = "__wood-base-assets__/graphics/icons/wood-transport-belt.png",
+      icon = "__wood-logistics__/graphics/icons/wood-transport-belt.png",
       icon_size = 64, icon_mipmaps = 4,
       flags = {"not-on-map"},
       hidden = true,
@@ -58,7 +58,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "explosion",
       name = "wood-underground-belt-explosion",
-      icon = "__wood-base-assets__/graphics/icons/wood-underground-belt.png",
+      icon = "__wood-logistics__/graphics/icons/wood-underground-belt.png",
       icon_size = 64, icon_mipmaps = 4,
       flags = {"not-on-map"},
       hidden = true,
@@ -108,7 +108,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "explosion",
       name = "wood-splitter-explosion",
-      icon = "__wood-base-assets__/graphics/icons/wood-splitter.png",
+      icon = "__wood-logistics__/graphics/icons/wood-splitter.png",
       icon_size = 64, icon_mipmaps = 4,
       flags = {"not-on-map"},
       hidden = true,
@@ -188,7 +188,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
     {
       type = "explosion",
       name = "lumber-mill-explosion",
-      icon = "__wood-base-assets__/graphics/icons/lumber-mill.png",
+      icon = "__wood-logistics__/graphics/icons/lumber-mill.png",
       flags = {"not-on-map"},
       hidden = true,
       hidden_in_factoriopedia = true,
@@ -292,7 +292,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
     {
       type = "explosion",
       name = "wood-cargo-wagon-explosion",
-      icon = "__wood-base-assets__/graphics/icons/wood-cargo-wagon.png",
+      icon = "__wood-logistics__/graphics/icons/wood-cargo-wagon.png",
       flags = {"not-on-map"},
       hidden = true,
       hidden_in_factoriopedia = true,
@@ -349,73 +349,5 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
         }
       }
     }
-  })
-end
-
--------------------------------------------------------------------------- Electric poles
-
-if settings.startup["wood-logistics-big-electric-pole"].value then
-  data:extend({
-    {
-      type = "explosion",
-      name = "big-wood-electric-pole-explosion",
-      icon = "__wood-base-assets__/graphics/icons/big-wood-electric-pole.png",
-      icon_size = 64, icon_mipmaps = 4,
-      flags = {"not-on-map"},
-      hidden = true,
-      hidden_in_factoriopedia = true,
-      subgroup = "energy-pipe-distribution-explosions",
-      order = "d-d-a",
-      height = 0,
-      animations = explosion_animations.medium_explosion(),
-      smoke = "smoke-fast",
-      smoke_count = 2,
-      smoke_slow_down_factor = 1,
-      sound = sounds.medium_explosion,
-      created_effect = {
-        type = "direct",
-        action_delivery = {
-          type = "instant",
-          target_effects = {
-            {
-              type = "create-particle",
-              repeat_count = 25,
-              particle_name = "small-electric-pole-wooden-splinter-particle-medium",
-              offset_deviation = {{-0.5, -0.6953}, {0.5, 0.6953}},
-              initial_height = 0.8,
-              initial_height_deviation = 0.5,
-              initial_vertical_speed = 0.069,
-              initial_vertical_speed_deviation = 0.05,
-              speed_from_center = 0.05,
-              speed_from_center_deviation = 0.05
-            },
-            {
-              type = "create-particle",
-              repeat_count = 10,
-              particle_name = "cable-and-electronics-particle-small-medium",
-              offset_deviation = {{-0.6953, -0.2969}, {0.6953, 0.2969}},
-              initial_height = 0.5,
-              initial_height_deviation = 0.5,
-              initial_vertical_speed = 0.04,
-              initial_vertical_speed_deviation = 0.05,
-              speed_from_center = 0.02,
-              speed_from_center_deviation = 0.043
-            },
-            {
-              type = "create-particle",
-              repeat_count = 30,
-              particle_name = "small-electric-pole-wooden-splinter-particle-small",
-              offset_deviation = {{-0.5977, -0.7891}, {0.5977, 0.7891}},
-              initial_height = 0.4,
-              initial_height_deviation = 0.44,
-              initial_vertical_speed = 0.053,
-              initial_vertical_speed_deviation = 0.05,
-              speed_from_center = 0.06,
-              speed_from_center_deviation = 0.05
-            }
-          }
-        }
-      }
-    },
   })
 end

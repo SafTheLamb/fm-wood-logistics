@@ -5,7 +5,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "corpse",
       name = "wood-transport-belt-remnants",
-      icon = "__wood-base-assets__/graphics/icons/wood-transport-belt.png",
+      icon = "__wood-logistics__/graphics/icons/wood-transport-belt.png",
       flags = {"placeable-neutral", "not-on-map"},
       hidden = true,
       hidden_in_factoriopedia = true,
@@ -18,7 +18,7 @@ if settings.startup["wood-logistics-belts"].value then
       time_before_removed = 60 * 60 * 15, -- 15 minutes
       final_render_layer = "remnants",
       animation =  make_rotated_animation_variations_from_sheet(2, {
-        filename = "__wood-base-assets__/graphics/entity/wood-transport-belt/remnants/wood-transport-belt-remnants.png",
+        filename = "__wood-logistics__/graphics/entity/wood-transport-belt/remnants/wood-transport-belt-remnants.png",
         line_length = 1,
         width = 106,
         height = 102,
@@ -34,7 +34,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "corpse",
       name = "wood-underground-belt-remnants",
-      icon = "__wood-base-assets__/graphics/icons/wood-underground-belt.png",
+      icon = "__wood-logistics__/graphics/icons/wood-underground-belt.png",
       flags = {"placeable-neutral", "not-on-map", "building-direction-8-way"},
       hidden = true,
       hidden_in_factoriopedia = true,
@@ -48,7 +48,7 @@ if settings.startup["wood-logistics-belts"].value then
       final_render_layer = "remnants",
       remove_on_tile_placement = false,
       animation = {
-        filename = "__wood-base-assets__/graphics/entity/wood-underground-belt/remnants/wood-underground-belt-remnants.png",
+        filename = "__wood-logistics__/graphics/entity/wood-underground-belt/remnants/wood-underground-belt-remnants.png",
         line_length = 1,
         width = 156,
         height = 144,
@@ -64,7 +64,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "corpse",
       name = "wood-splitter-remnants",
-      icon = "__wood-base-assets__/graphics/icons/wood-splitter.png",
+      icon = "__wood-logistics__/graphics/icons/wood-splitter.png",
       flags = {"placeable-neutral", "not-on-map"},
       hidden = true,
       hidden_in_factoriopedia = true,
@@ -78,7 +78,7 @@ if settings.startup["wood-logistics-belts"].value then
       final_render_layer = "remnants",
       remove_on_tile_placement = false,
       animation = {
-        filename = "__wood-base-assets__/graphics/entity/wood-splitter/remnants/wood-splitter-remnants.png",
+        filename = "__wood-logistics__/graphics/entity/wood-splitter/remnants/wood-splitter-remnants.png",
         line_length = 1,
         width = 190,
         height = 190,
@@ -100,7 +100,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
     {
       type = "corpse",
       name = "lumber-mill-remnants",
-      icon = "__wood-base-assets__/graphics/icons/lumber-mill.png",
+      icon = "__wood-logistics__/graphics/icons/lumber-mill.png",
       flags = {"placeable-neutral", "not-on-map"},
       hidden = true,
       hidden_in_factoriopedia = true,
@@ -135,7 +135,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
     {
       type = "corpse",
       name = "wood-cargo-wagon-remnants",
-      icon = "__wood-base-assets__/graphics/icons/wood-cargo-wagon.png",
+      icon = "__wood-logistics__/graphics/icons/wood-cargo-wagon.png",
       flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
       hidden = true,
       hidden_in_factoriopedia = true,
@@ -149,7 +149,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
       final_render_layer = "remnants",
       remove_on_tile_placement = false,
       animation = {
-        filename = "__wood-base-assets__/graphics/entity/wood-cargo-wagon/remnants/wood-cargo-wagon-remnants.png",
+        filename = "__wood-logistics__/graphics/entity/wood-cargo-wagon/remnants/wood-cargo-wagon-remnants.png",
         line_length = 1,
         width = 494,
         height = 484,
@@ -158,59 +158,5 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
         scale = 0.5
       }
     }
-  })
-end
-
--------------------------------------------------------------------------- Electric poles
-
-if settings.startup["wood-logistics-big-electric-pole"].value then
-  data:extend({
-    {
-      type = "corpse",
-      name = "big-wood-electric-pole-remnants",
-      icon = "__wood-base-assets__/graphics/icons/big-wood-electric-pole.png",
-      flags = {"placeable-neutral", "not-on-map"},
-      hidden = true,
-      hidden_in_factoriopedia = true,
-      subgroup = "energy-pipe-distribution-remnants",
-      order = "a-c-a",
-      collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
-      selection_box = {{-1, -1}, {1, 1}},
-      tile_width = 2,
-      tile_height = 2,
-      selectable_in_game = false,
-      time_before_removed = 60 * 60 * 15, -- 15 minutes
-      final_render_layer = "remnants",
-      animation_overlay_final_render_layer = "object",
-      remove_on_tile_placement = false,
-      animation = make_rotated_animation_variations_from_sheet (4, {
-        layers = {
-          {
-            filename = "__wood-base-assets__/graphics/entity/big-wood-electric-pole/remnants/big-wood-electric-pole-base-remnants.png",
-            line_length = 1,
-            width = 366,
-            height = 188,
-            frame_count = 1,
-            direction_count = 1,
-            shift = util.by_pixel(43, 0.5),
-            scale = 0.5
-          }
-        }
-      }),
-      animation_overlay = make_rotated_animation_variations_from_sheet (4, {
-        layers = {
-          {
-            filename = "__wood-base-assets__/graphics/entity/big-wood-electric-pole/remnants/big-wood-electric-pole-top-remnants.png",
-            line_length = 1,
-            width = 148,
-            height = 252,
-            frame_count = 1,
-            direction_count = 1,
-            shift = util.by_pixel(-1.5, -48),
-            scale = 0.5
-          }
-        }
-      })
-    },
   })
 end

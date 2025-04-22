@@ -1,13 +1,35 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.5.0
+Date: 2025-04-01
+  Major Features:
+    - Add alternative recipe for crafting electronic circuits from wood (replaces AAI Industry's recipe if enabled)
+  Graphics:
+    - Import graphics from wooden base assets mod
+    - Add frozen patch layer for lumbermill
+  Compatibility:
+    - Added Voidcraft compatibility for lumber and wood transport belts
+  Balancing:
+    - Make transport belts only upgrade 1 belt at a time (effectively doubling their crafting time and iron cost)
+  Changes:
+    - Remove optional big wood electric poles
+    - Add big wooden pole as a required dependency
+    - Remove optional red science cost change
+  Bugfixes:
+    - Fix localization for vanilla loader
+    - Add wooden AAI Loader to lumbermill carpentry
+---------------------------------------------------------------------------------------------------
+Version: 2.4.3
+  Compatibility:
+    - Fix localization for Deadlock Beltboxes and Loaders
+    - Add voidcrafting recipes
+---------------------------------------------------------------------------------------------------
 Version: 2.4.2
   Compatibility:
     - When the Sign post mod is installed, add 1 Lumber to its recipe
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
   Compatibility:
     - Add support for Deadlock Beltboxes and Loaders
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.0
   Changes:
@@ -15,22 +37,18 @@ Version: 2.4.0
     - AAI Industry: Lumber moved from assembling machine 1 to burner assembler
     - Doubled time required to craft lumber
     - Removed surface condition from lumber mill
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.12
   Changes:
     - Really basic logistics is now researched with crafting 10 lumber instead of 50 copper cables
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.11
   Changes:
     - Undo base tint of vanilla loaders
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.10
   Bugfixes:
     - Hide effects and remnants in factoriopedia
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.9
   Changes:
@@ -39,22 +57,18 @@ Version: 2.3.9
     - Add setting for making wooden belts unable to connect to circuit networks... they're made of wood!
   Bugfixes:
     - Fix circuit connection points for wooden belts... by removing circuits for wooden belts! :)
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.8
   Changes:
     - After talking with ldinc, compatibility for Amator Phasma's Coal & Steam is now managed over there!
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.7
   Changes:
     - More APCS compat
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.6
   Changes:
     - Fix errors when APCS is installed with AAI Loaders but without AAI Industry
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.5
   Changes:
@@ -65,34 +79,28 @@ Version: 2.3.5
   Bugfixes:
     - Fix compatibility for APCS + AAI Loaders
     - Fix error when AAI Loaders is set to Graphics Only mode
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.4
   Bugfixes:
     - Fix compatibility for Amator Phasma's Coal & Steam
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.3
   Bugfixes:
     - Fix emissive texture for lumber mill (cursed type)
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.2
   Minor Features:
     - Add basic compatibility for Amator Phasma's Coal & Steam: wooden belts now all unlock at the same time
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.1
   Minor Features:
     - Add settings to control whether vanilla belts require wood belts (default true)
   Changes:
     - Disable big wood electric poles by default (big wooden poles are preferred)
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.0
   Changes:
     - Migrate assets to separate Wood Base Assets mod
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.2
   Changes:
@@ -100,17 +108,14 @@ Version: 2.2.2
   Bugfixes:
     - Add compatibility with Wood-Walls when Lumber is enabled
     - Fix compat with Hot metals
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.1
   Bugfixes:
     - Fix dependence on Space Age assets
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.0
   Major Features:
     - New Lumber Mill, credit to Hurricane for the wonderful graphics!
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.2
   Major Features:
@@ -122,24 +127,20 @@ Version: 2.1.2
     - Give items missing item sounds
   Changes:
     - Add missing fuel value to lumber
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
   Changes:
     - Change lab recipe to fix impossible progression
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
   Changes:
     - Replace Basic gear wheels with Lumber and give it its own dedicated setting
     - Swap out kry_stdlib for fdsl
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
   Changes:
     - Increase cost for Automation science packs to 2 wood transport belts
     - Remove unused red science cost startup setting
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
   Major Features:
@@ -150,7 +151,6 @@ Version: 2.0.1
   Changes:
     - Remove Copper cables from Big wooden electric pole recipe
     - Simplify recipe for Basic gear wheels to 2 wood
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
   Major Features:
