@@ -1,3 +1,5 @@
+local frep = require("__fdsl__.lib.recipe")
+
 local recipe_category = settings.startup["wood-logistics-lumber-mill"].value and "crafting-or-carpentry" or "crafting"
 local lumber_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
 
@@ -15,5 +17,9 @@ if mods["vanilla-loaders-hd"] and settings.startup["wood-logistics-belts"].value
       next_tier = "loader"
     })
     data.raw.recipe["wood-loader"].category = recipe_category
+
+    if settings.startup["wood-logistics-belts-modify"].value then
+      frep.replace_ingredient("loader", "iron-gear-wheel", {type="item", name="wood-loader", amount=1})
+    end
   end
 end

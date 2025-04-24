@@ -43,19 +43,6 @@ if settings.startup["wood-logistics-belts"].value then
   if not mods["aai-industry"] then
     frep.replace_ingredient("lab", "transport-belt", "inserter")
   end
-
-  if mods["aai-loaders"] and settings.startup["aai-loaders-mode"].value ~= "graphics-only" then
-    data.raw.item["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
-    data.raw.recipe["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
-    if settings.startup["wood-logistics-belts-modify"].value then
-      frep.replace_ingredient("aai-loader", "transport-belt", "aai-wood-loader")
-    end
-  end
-  if mods["vanilla-loaders-hd"] then
-    if settings.startup["wood-logistics-belts-modify"].value then
-      frep.replace_ingredient("loader", "iron-gear-wheel", {type="item", name="wood-loader", amount=1})
-    end
-  end
 end
 
 if settings.startup["wood-logistics-cargo-wagon"].value then
