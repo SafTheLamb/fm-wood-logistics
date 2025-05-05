@@ -285,7 +285,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
         {inventory_index=defines.inventory.assembling_machine_modules, shift={0, 1.25}}
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
-      crafting_categories = {"carpentry", "crafting-or-carpentry"},
+      crafting_categories = {"carpentry", "crafting-or-carpentry", "advanced-crafting-or-carpentry"},
       crafting_speed = 2,
       energy_source = {
         type = "electric",

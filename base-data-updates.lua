@@ -26,6 +26,7 @@ end
 if settings.startup["wood-logistics-lumber-mill"].value then
   data.raw.recipe["wooden-chest"].category = "crafting-or-carpentry"
   data.raw.recipe["small-electric-pole"].category = "crafting-or-carpentry"
+  data.raw.recipe["rail"].category = "crafting-or-carpentry"
 end
 
 if settings.startup["wood-logistics-belts"].value then

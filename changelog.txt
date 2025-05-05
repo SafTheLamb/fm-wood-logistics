@@ -1,7 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.5.4
-Date: ????
+Date: 2025-05-05
   Changes:
+    - Fix recipe for lumber mill
+    - Fix technology prerequisites for advanced carpentry
+    - Allow lumber mills to be crafted by lumber mills
+    - Add rails to carpentry recipe category (making them craftable by lumber mills)
+  Locale:
+    - Add CN localization (thanks to Houraiji-Kyuusyou!)
 ---------------------------------------------------------------------------------------------------
 Version: 2.5.3
 Date: 2025-04-25

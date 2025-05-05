@@ -19,9 +19,9 @@ end
 
 if settings.startup["wood-logistics-lumber-mill"].value then
   if mods["space-age"] then
-    ftech.add_prereq("advanced-carpentry", "carbon-fiber")
+    ftech.add_prereq("advanced-carpentry", "metallurgic-science-pack")
     ftech.add_cost_ingredient("advanced-carpentry", "space-science-pack")
-    ftech.add_cost_ingredient("advanced-carpentry", "agricultural-science-pack")
+    ftech.add_cost_ingredient("advanced-carpentry", "metallurgic-science-pack")
   end
 end
 

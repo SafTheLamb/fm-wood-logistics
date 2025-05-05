@@ -37,7 +37,8 @@ if settings.startup["wood-logistics-woodtronics"].value then
         {type="item", name=lumber_item, amount=1},
         {type="item", name="copper-cable", amount=5}
       },
-      results = {{type="item", name="electronic-circuit", amount=2}}
+      results = {{type="item", name="electronic-circuit", amount=2}},
+      main_product = "electronic-circuit"
     }
   })
 end
@@ -97,7 +98,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
       energy_required = 20,
       ingredients = {
         {type="item", name=lumber_item, amount=80},
-        mods["space-age"] and {type="item", name="carbon-fiber", amount=20} or {type="item", name="steel-plate", amount=40},
+        mods["space-age"] and {type="item", name="tungsten-plate", amount=20} or {type="item", name="steel-plate", amount=40},
         {type="item", name="processing-unit", amount=10},
         {type="item", name="electric-engine-unit", amount=5}
       },
