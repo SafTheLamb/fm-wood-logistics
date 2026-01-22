@@ -17,7 +17,7 @@ if mods["Voidcraft"] then
 		table.insert(vc_recipes, VOIDCRAFT.voidcraft_recipe({prefix="__wood-logistics__", subgroup="voidcraft-wood", entity=true}, {"wood-splitter", lumber_item, "wood-transport-belt"}, "vcb-Ac", 0.5*vcc.splitter, "s6x-void-belts", {0.48, 0.4, 0.1}))
 	end
 
-	if vc_recipes ~= {} then
+	if next(vc_recipes) ~= nil then
 		data:extend(vc_recipes)
 		for _,recipe in pairs(vc_recipes) do
 			data:extend({
