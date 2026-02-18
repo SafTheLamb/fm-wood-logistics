@@ -159,6 +159,18 @@ if settings.startup["wood-logistics-belts"].value then
             scale = 0.5
           }
         }
+      },
+      factoriopedia_simulation = {
+        init =
+          [[
+            game.simulation.camera_position = {0, 0.5}
+            game.simulation.camera_zoom = 1.8
+            game.surfaces[1].create_entities_from_blueprint_string
+            {
+              string = "0eNqVUNsKgzAM/Zc81+FEBfsrYwwvQQKaltpuivjvS3Wwh8HGnkKSc0tWaIaA1hF70CtMXNvEm6R31MV+Bl0oWECfNwXUGp5AXwRGPddDBHA9Imh4GNMlgTt0vTNSkwYHD5EjsznSrwqQPXnCQ2JvlhuHsUEnAPVdSoE1k7ANv2KlpyOYVLHpyGF7bHMFfrFRidiGGOLDLPvXLP9tZoLf3eRO8jjK5P1YBXd0004oyqzKq6ooqzLNinLbnvlmf6E=",
+              position = {-0.5, 0}
+            }
+          ]]
       }
     },
     {
@@ -336,14 +348,21 @@ if settings.startup["wood-logistics-lumber-mill"].value then
         },
       },
       working_sound = {
-        sound = {
-          filename = mods["space-age"] and "__space-age__/sound/entity/foundry/foundry.ogg" or "__base__/sound/assembling-machine-t3-1.ogg",
-          volume = 0.5
-        },
         fade_in_ticks = 4,
         fade_out_ticks = 20,
         audible_distance_modifier = 0.6,
-        max_sounds_per_type = 2
+        max_sounds_per_type = 2,
+        sound = { filename = "__space-age__/sound/entity/foundry/foundry.ogg", volume = 0.6 },
+        sound_accents = {
+          { sound = { filename = "__wood-logistics__/sound/lumber-mill/lumber-mill-saw-1.ogg", volume = 0.8, audible_distance_modifier = 0.5 },           frame = 26 },
+          { sound = { filename = "__wood-logistics__/sound/lumber-mill/lumber-mill-fall.ogg", volume = 1.2, audible_distance_modifier = 0.5 },            frame = 42 },
+          { sound = { filename = "__wood-logistics__/sound/lumber-mill/lumber-mill-saw-2.ogg", volume = 0.8, audible_distance_modifier = 0.4 },           frame = 53 },
+          { sound = { filename = "__wood-logistics__/sound/lumber-mill/lumber-mill-split.ogg", volume = 0.4, audible_distance_modifier = 0.3 },           frame = 62 },
+          { sound = { variations = sound_variations("__wood-logistics__/sound/lumber-mill/lumber-mill-plank", 3, 0.5), audible_distance_modifier = 0.3 }, frame = 14 },
+          { sound = { variations = sound_variations("__wood-logistics__/sound/lumber-mill/lumber-mill-plank", 3, 0.5), audible_distance_modifier = 0.3 }, frame = 34 },
+          { sound = { variations = sound_variations("__wood-logistics__/sound/lumber-mill/lumber-mill-plank", 3, 0.5), audible_distance_modifier = 0.3 }, frame = 54 },
+          { sound = { variations = sound_variations("__wood-logistics__/sound/lumber-mill/lumber-mill-plank", 3, 0.5), audible_distance_modifier = 0.3 }, frame = 74 },
+        }
       }
     }
   })
