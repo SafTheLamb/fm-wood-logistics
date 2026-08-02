@@ -1,6 +1,5 @@
 local frep = require("__fdsl__.lib.recipe")
 
-local recipe_category = settings.startup["wood-logistics-lumber-mill"].value and "crafting-or-carpentry" or "crafting"
 local lumber_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
 
 if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
@@ -40,10 +39,12 @@ if mods["aai-loaders"] and settings.startup["wood-logistics-belts"].value then
   }
   if settings.startup["aai-loaders-mode"].value ~= "graphics-only" then
     data.raw.item["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
-    data.raw.recipe["aai-wood-loader"].category = recipe_category
     data.raw.recipe["aai-wood-loader"].order = "d[loader]-a00[aai-wood-loader]"
     if settings.startup["wood-logistics-belts-modify"].value then
       frep.replace_ingredient("aai-loader", "transport-belt", "aai-wood-loader")
+    end
+    if settings.startup["wood-logistics-lumber-mill"].value then
+      frep.add_category("aai-wood-loader", "carpentry")
     end
   end
 end

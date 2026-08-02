@@ -1,4 +1,5 @@
-local recipe_category = settings.startup["wood-logistics-lumber-mill"].value and "crafting-or-carpentry" or "crafting"
+local frep = require("__fdsl__.lib.recipe")
+
 local lumber_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
 
 if mods["deadlock-beltboxes-loaders"] then
@@ -24,7 +25,7 @@ if mods["deadlock-beltboxes-loaders"] then
     if data.raw.technology["deadlock-stacking-1"] then
       table.insert(data.raw.technology["deadlock-stacking-1"].prerequisites, "deadlock-stacking-0")
     end
-    data.raw.recipe["wood-transport-belt-loader"].category = recipe_category
+    frep.add_category("wood-transport-belt-loader", "carpentry")
     if data.raw["loader-1x1"]["wood-transport-belt-loader"] then
       data.raw["loader-1x1"]["wood-transport-belt-loader"].next_upgrade = "transport-belt-loader"
     end
