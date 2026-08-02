@@ -8,6 +8,6 @@ if mods["big-wooden-pole"] then
   end
 
   if settings.startup["wood-logistics-lumber-mill"].value then
-    data.raw.recipe["big-wooden-pole"].category = "crafting-or-carpentry"
+    frep.add_category("big-wooden-pole", "carpentry")
   end
 end

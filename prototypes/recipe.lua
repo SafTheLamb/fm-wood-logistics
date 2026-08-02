@@ -1,5 +1,5 @@
 local lumber_item = settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
-local recipe_category = settings.startup["wood-logistics-lumber-mill"].value and "crafting-or-carpentry" or "crafting"
+local recipe_categories = settings.startup["wood-logistics-lumber-mill"].value and {"crafting", "carpentry"} or "crafting"
 
 -------------------------------------------------------------------------- Intermediates
 
@@ -8,7 +8,7 @@ if settings.startup["wood-logistics-lumber"].value then
     {
       type = "recipe",
       name = "lumber",
-      category = recipe_category,
+      categories = recipe_categories,
       allow_productivity = true,
       energy_required = 1,
       ingredients = {
@@ -28,7 +28,7 @@ if settings.startup["wood-logistics-woodtronics"].value then
         {icon="__base__/graphics/icons/electronic-circuit.png"},
         {icon=data.raw.item[lumber_item].icon, shift={-12, -12}, scale=0.4, draw_background=true}
       },
-      category = data.raw.recipe["electronic-circuit"].category,
+      categories = data.raw.recipe["electronic-circuit"].categories,
       order = "b[circuits]-a[electronic-circuit]b",
       enabled = false,
       allow_productivity = true,
@@ -52,7 +52,7 @@ if settings.startup["wood-logistics-belts"].value then
       type = "recipe",
       name = "wood-transport-belt",
       enabled = not mods["aai-industry"],
-      category = recipe_category,
+      categories = recipe_categories,
       ingredients = {
         {type="item", name=lumber_item, amount=1},
         {type="item", name="copper-cable", amount=2}
@@ -62,7 +62,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "recipe",
       name = "wood-underground-belt",
-      category = recipe_category,
+      categories = recipe_categories,
       enabled = false,
       energy_required = 1,
       ingredients = {
@@ -74,7 +74,7 @@ if settings.startup["wood-logistics-belts"].value then
     {
       type = "recipe",
       name = "wood-splitter",
-      category = recipe_category,
+      categories = recipe_categories,
       enabled = false,
       energy_required = 1,
       ingredients = {
@@ -94,7 +94,7 @@ if settings.startup["wood-logistics-lumber-mill"].value then
     {
       type = "recipe",
       name = "lumber-mill",
-      category = "advanced-crafting-or-carpentry",
+      categories = {"advanced-crafting", "carpentry"},
       enabled = false,
       energy_required = 20,
       ingredients = {
@@ -115,7 +115,7 @@ if settings.startup["wood-logistics-cargo-wagon"].value then
     {
       type = "recipe",
       name = "wood-cargo-wagon",
-      category = recipe_category,
+      categories = recipe_categories,
       energy_required = 1,
       enabled = false,
       ingredients = {

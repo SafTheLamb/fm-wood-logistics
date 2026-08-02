@@ -16,7 +16,7 @@ if mods["vanilla-loaders-hd"] and settings.startup["wood-logistics-belts"].value
       },
       next_tier = "loader"
     })
-    data.raw.recipe["wood-loader"].category = recipe_category
+    frep.add_category(data.raw.recipe["wood-loader"], "carpentry")
 
     if settings.startup["wood-logistics-belts-modify"].value then
       frep.replace_ingredient("loader", "iron-gear-wheel", {type="item", name="wood-loader", amount=1})
