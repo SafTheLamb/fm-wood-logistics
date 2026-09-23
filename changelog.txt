@@ -2,8 +2,9 @@
 Version: 2.6.1
 Date: ????
   Changes:
+    - Fix fuel_category -> fuel_categories which was changed with 2.1.20
 ---------------------------------------------------------------------------------------------------
-Version: 2.5.6
+Version: 2.6.0
 Date: ????
   Changes:
     - Updated to 2.1

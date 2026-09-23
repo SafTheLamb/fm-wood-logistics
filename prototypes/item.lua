@@ -22,7 +22,7 @@ if settings.startup["wood-logistics-lumber"].value then
       drop_sound = item_sounds.wood_inventory_move,
       stack_size = 100,
       random_tint_color = {1.0, 0.95, 0.9, 1.0},
-      fuel_category = "chemical",
+      fuel_categories = {"chemical"},
       fuel_value = "4MJ"
     }
   })
